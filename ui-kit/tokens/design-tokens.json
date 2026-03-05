@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "source": "MasterDesignSystem.tokens.json",
+    "mode": "Arial"
+  },
+  "aliases": {
+    "letterColor.text.dark": "{Primary.100}",
+    "letterColor.text.gray": "{Primary.200}",
+    "letterColor.special.link": "{Brand Color.1.500}",
+    "letterColor.special.warning": "{Accent Color.Warning.500}"
+  },
+  "semantic": {
+    "surface": {
+      "background": "{Secondary.4}",
+      "header": "{Secondary.1}",
+      "subheader": "{Secondary.2}",
+      "card": "{Secondary.5}"
+    },
+    "text": {
+      "default": "#FFFFFF",
+      "dark": "{Primary.100}",
+      "gray": "{Primary.200}"
+    },
+    "status": {
+      "error": "{Accent Color.Error.500}",
+      "success": "{Accent Color.Success.500}",
+      "warning": "{Accent Color.Warning.500}",
+      "info": "{Accent Color.Info.500}"
+    }
+  }
+}

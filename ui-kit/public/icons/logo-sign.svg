@@ -1,0 +1,9 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="Sign" fill-rule="evenodd" clip-rule="evenodd" d="M15.0605 22.8928L19.6852 16.946H16.9976L13.1961 12.3288H30L16.0291 29.7583C15.908 29.9033 15.7143 30 15.5206 30H14.6489C14.4552 30 14.2615 29.9033 14.1404 29.7583L0 12.2079H6.58596L15.0363 22.8445V22.8928H15.0605ZM20.7748 5.39081H9.27361L6.58596 9.6938H0.0726392L5.01211 0.725222C5.15738 0.314263 5.52058 0 5.98063 0H24.0678C24.5278 0 24.891 0.314263 25.0363 0.725222L29.9758 9.71797H23.4867L20.799 5.41499H20.7506L20.7748 5.39081Z" fill="url(#paint0_linear_0_5069)"/>
+<defs>
+<linearGradient id="paint0_linear_0_5069" x1="4.72155" y1="-8.21918" x2="24.0194" y2="27.8503" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F39628"/>
+<stop offset="1" stop-color="#A80BEB"/>
+</linearGradient>
+</defs>
+</svg>
