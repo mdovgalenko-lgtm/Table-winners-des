@@ -205,13 +205,13 @@ function ChatMessage({ msg }: { msg: ChatMsg }) {
 
 const PANEL_VARIANTS = {
   hidden: { y: "100%", opacity: 0 },
-  visible: { y: 0, opacity: 1, transition: { type: "spring", damping: 28, stiffness: 280 } },
+  visible: { y: 0, opacity: 1, transition: { type: "spring" as const, damping: 28, stiffness: 280 } },
   exit: { y: "100%", opacity: 0, transition: { duration: 0.25, ease: MOTION.easing.accelerate } },
 };
 
 const COLLAPSED_VARIANTS = {
   hidden: { y: 40, opacity: 0 },
-  visible: { y: 0, opacity: 1, transition: { type: "spring", damping: 28, stiffness: 280 } },
+  visible: { y: 0, opacity: 1, transition: { type: "spring" as const, damping: 28, stiffness: 280 } },
   exit: { y: 40, opacity: 0, transition: { duration: 0.2, ease: MOTION.easing.accelerate } },
 };
 
