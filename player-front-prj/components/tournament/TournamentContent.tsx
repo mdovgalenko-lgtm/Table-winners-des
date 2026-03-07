@@ -223,14 +223,6 @@ function FlashIcon() {
   );
 }
 
-function ChevronRightIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-      <path d="M7.5 5L12.5 10L7.5 15" stroke="#ebebf2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
 function ArrowRightSmallIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">

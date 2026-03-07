@@ -51,7 +51,7 @@ export const INITIAL_PENDING_WITHDRAWALS: PendingWithdrawal[] = [
 
 const SHEET_VARIANTS = {
   hidden: { y: "100%" },
-  visible: { y: 0, transition: { type: "spring", damping: 30, stiffness: 300 } },
+  visible: { y: 0, transition: { type: "spring" as const, damping: 30, stiffness: 300 } },
   exit: { y: "100%", transition: { duration: 0.25, ease: MOTION.easing.accelerate } },
 };
 
