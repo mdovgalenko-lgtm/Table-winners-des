@@ -15,7 +15,7 @@ const categories = [
 ];
 
 export default function LiveCasinoCategoryTabs() {
-  const [active, setActive] = useState("popular");
+  const [active, setActive] = useState<string | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   return (

@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState, useCallback, useEffect } from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { MOTION } from "@/lib/motion";
 
@@ -19,6 +20,7 @@ interface BannerData {
   title: string;
   subtitle: string;
   buttonText: string;
+  href?: string;
 }
 
 const banners: BannerData[] = [
@@ -30,6 +32,7 @@ const banners: BannerData[] = [
     subtitle:
       "Sub text: is simply dummy text of the printing and typesetting",
     buttonText: "Button",
+    href: "/tournament",
   },
   {
     id: 2,
@@ -39,6 +42,7 @@ const banners: BannerData[] = [
     subtitle:
       "Sub text: is simply dummy text of the printing and typesetting",
     buttonText: "Button",
+    href: "/lottery",
   },
   {
     id: 3,
@@ -48,6 +52,7 @@ const banners: BannerData[] = [
     subtitle:
       "Sub text: is simply dummy text of the printing and typesetting",
     buttonText: "Button",
+    href: "/contest",
   },
 ];
 
@@ -87,48 +92,57 @@ export default function BannerCarousel() {
           WebkitOverflowScrolling: "touch",
         }}
       >
-        {banners.map((banner) => (
-          <div
-            key={banner.id}
-            className="shrink-0 snap-center overflow-hidden"
-            style={{
-              width: BANNER_WIDTH,
-              height: 152,
-              borderRadius: 16,
-              background: `linear-gradient(to bottom, ${banner.gradientFrom}, ${banner.gradientTo})`,
-              boxShadow: "0px 1px 5px 2px rgba(0,0,0,0.15)",
-            }}
-          >
-            <div className="flex items-center h-full">
-              <div className="flex-1 flex flex-col gap-2 px-3 py-2 min-w-0">
-                <p className="text-white font-bold text-[16px] leading-[18px]">
-                  {banner.title}
-                </p>
-                <p className="text-white text-[12px] leading-[14px]">
-                  {banner.subtitle}
-                </p>
-                <button className="self-start flex items-center justify-center h-8 px-4 bg-brand-500 rounded-[20px] shadow-[0px_1px_5px_2px_rgba(0,0,0,0.15)]">
-                  <span className="text-white font-bold text-[14px] leading-[16px] text-center whitespace-nowrap">
-                    {banner.buttonText}
-                  </span>
-                </button>
-              </div>
-              <div
-                className="shrink-0 overflow-hidden"
-                style={{ width: 152, height: 152 }}
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={bannerImage}
-                  alt=""
-                  width={152}
-                  height={152}
-                  className="w-full h-full object-cover"
-                />
+        {banners.map((banner) => {
+          const card = (
+            <div
+              className="shrink-0 snap-center overflow-hidden"
+              style={{
+                width: BANNER_WIDTH,
+                height: 152,
+                borderRadius: 16,
+                background: `linear-gradient(to bottom, ${banner.gradientFrom}, ${banner.gradientTo})`,
+                boxShadow: "0px 1px 5px 2px rgba(0,0,0,0.15)",
+              }}
+            >
+              <div className="flex items-center h-full">
+                <div className="flex-1 flex flex-col gap-2 px-3 py-2 min-w-0">
+                  <p className="text-white font-bold text-[16px] leading-[18px]">
+                    {banner.title}
+                  </p>
+                  <p className="text-white text-[12px] leading-[14px]">
+                    {banner.subtitle}
+                  </p>
+                  <button className="self-start flex items-center justify-center h-8 px-4 bg-brand-500 rounded-[20px] shadow-[0px_1px_5px_2px_rgba(0,0,0,0.15)]">
+                    <span className="text-white font-bold text-[14px] leading-[16px] text-center whitespace-nowrap">
+                      {banner.buttonText}
+                    </span>
+                  </button>
+                </div>
+                <div
+                  className="shrink-0 overflow-hidden"
+                  style={{ width: 152, height: 152 }}
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={bannerImage}
+                    alt=""
+                    width={152}
+                    height={152}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+
+          return banner.href ? (
+            <Link key={banner.id} href={banner.href}>
+              {card}
+            </Link>
+          ) : (
+            <div key={banner.id}>{card}</div>
+          );
+        })}
       </div>
 
       <div className="flex justify-center gap-1.5 mt-3">

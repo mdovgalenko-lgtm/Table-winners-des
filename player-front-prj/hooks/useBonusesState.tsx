@@ -131,14 +131,14 @@ interface BonusesContextValue {
   addToBalance: (amount: number) => void;
   activateReward: (id: string) => void;
   deactivateReward: (id: string) => void;
-  headerBalanceRef: React.RefObject<HTMLDivElement | null>;
+  headerBalanceRef: React.RefObject<HTMLButtonElement | null>;
 }
 
 const BonusesContext = createContext<BonusesContextValue | null>(null);
 
 export function BonusesProvider({ children }: { children: React.ReactNode }) {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const headerBalanceRef = useRef<HTMLDivElement>(null);
+  const headerBalanceRef = useRef<HTMLButtonElement>(null);
 
   const removeBonus = useCallback(
     (id: string) => dispatch({ type: "REMOVE_BONUS", id }),

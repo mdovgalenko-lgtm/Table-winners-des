@@ -15,7 +15,7 @@ const categories = [
 ];
 
 export default function CategoryTabs() {
-  const [active, setActive] = useState("top");
+  const [active, setActive] = useState<string | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   return (

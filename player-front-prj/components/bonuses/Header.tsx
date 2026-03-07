@@ -1,11 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { useState, useCallback } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useBonuses } from "@/hooks/useBonusesState";
 import { useCountUp } from "@/hooks/useCountUp";
 import { MOTION } from "@/lib/motion";
+import { CurrencyModal } from "@/components/shared/CurrencyModal";
+import { ChatPanel } from "@/components/shared/ChatPanel";
 
 function LogoSign() {
   return (
@@ -80,65 +82,77 @@ function MessagesIcon() {
 export function BonusesHeader({ glowing = false }: { glowing?: boolean }) {
   const { state, headerBalanceRef } = useBonuses();
   const displayBalance = useCountUp(state.headerBalance);
+  const [currencyOpen, setCurrencyOpen] = useState(false);
+  const [chatOpen, setChatOpen] = useState(false);
+  const closeChat = useCallback(() => setChatOpen(false), []);
+  const closeCurrency = useCallback(() => setCurrencyOpen(false), []);
 
   return (
-    <header className="bg-surface-header h-14 flex items-center justify-between px-4 shadow-header shrink-0 relative z-10">
-      <Link href="/casino" className="flex gap-2 items-center shrink-0" aria-label="Go to Casino">
-        <div className="relative shrink-0 w-8 h-8">
-          <div className="absolute inset-[3.13%]">
-            <LogoSign />
+    <>
+      <header className="bg-surface-header h-14 flex items-center justify-between px-4 shadow-header shrink-0 relative z-10">
+        <Link href="/casino" className="flex gap-2 items-center shrink-0" aria-label="Go to Casino">
+          <div className="relative shrink-0 w-8 h-8">
+            <div className="absolute inset-[3.13%]">
+              <LogoSign />
+            </div>
           </div>
+        </Link>
+
+        <div className="flex gap-2 items-center shrink-0">
+          <motion.button
+            ref={headerBalanceRef}
+            className="bg-surface-sub flex gap-2 h-8 items-center p-2 rounded-[16px] shadow-header shrink-0 cursor-pointer"
+            onClick={() => setCurrencyOpen(true)}
+            aria-label="Open currency selector"
+            animate={
+              glowing
+                ? {
+                    boxShadow: [
+                      "0 1px 5px 0 rgba(0,0,0,0.15)",
+                      "0 0 20px 4px rgba(131,82,255,0.5)",
+                      "0 1px 5px 0 rgba(0,0,0,0.15)",
+                    ],
+                    scale: [1, 1.05, 1],
+                  }
+                : {
+                    boxShadow: "0 1px 5px 0 rgba(0,0,0,0.15)",
+                    scale: 1,
+                  }
+            }
+            transition={{ duration: MOTION.duration.glow }}
+          >
+            <div className="flex gap-1.5 items-center">
+              <CurrencyIcon />
+              <span className="font-bold text-lg text-secondary-3 whitespace-nowrap">
+                {displayBalance.toFixed(2)}
+              </span>
+            </div>
+            <ArrowDownSmall />
+          </motion.button>
+
+          <motion.button
+            whileTap={{ scale: MOTION.press.scale }}
+            transition={MOTION.spring.stiff}
+            aria-label="Deposit"
+            className="bg-brand-500 flex flex-col items-center justify-center w-8 h-8 rounded-[20px] shrink-0 hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 transition-[filter] duration-150"
+          >
+            <WalletBoldIcon />
+          </motion.button>
+
+          <motion.button
+            whileTap={{ scale: MOTION.press.scale }}
+            transition={MOTION.spring.stiff}
+            onClick={() => setChatOpen((v) => !v)}
+            aria-label="Messages"
+            className="bg-surface-sub flex items-center justify-center w-8 h-8 rounded-[20px] shadow-header shrink-0 hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 transition-[filter] duration-150"
+          >
+            <MessagesIcon />
+          </motion.button>
         </div>
-      </Link>
+      </header>
 
-      <div className="flex gap-2 items-center shrink-0">
-        <motion.div
-          ref={headerBalanceRef}
-          className="bg-surface-sub flex gap-2 h-8 items-center p-2 rounded-[16px] shadow-header shrink-0"
-          animate={
-            glowing
-              ? {
-                  boxShadow: [
-                    "0 1px 5px 0 rgba(0,0,0,0.15)",
-                    "0 0 20px 4px rgba(131,82,255,0.5)",
-                    "0 1px 5px 0 rgba(0,0,0,0.15)",
-                  ],
-                  scale: [1, 1.05, 1],
-                }
-              : {
-                  boxShadow: "0 1px 5px 0 rgba(0,0,0,0.15)",
-                  scale: 1,
-                }
-          }
-          transition={{ duration: MOTION.duration.glow }}
-        >
-          <div className="flex gap-1.5 items-center">
-            <CurrencyIcon />
-            <span className="font-bold text-lg text-secondary-3 whitespace-nowrap">
-              {displayBalance.toFixed(2)}
-            </span>
-          </div>
-          <ArrowDownSmall />
-        </motion.div>
-
-        <motion.button
-          whileTap={{ scale: MOTION.press.scale }}
-          transition={MOTION.spring.stiff}
-          aria-label="Deposit"
-          className="bg-brand-500 flex flex-col items-center justify-center w-8 h-8 rounded-[20px] shrink-0 hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 transition-[filter] duration-150"
-        >
-          <WalletBoldIcon />
-        </motion.button>
-
-        <motion.button
-          whileTap={{ scale: MOTION.press.scale }}
-          transition={MOTION.spring.stiff}
-          aria-label="Messages"
-          className="bg-surface-sub flex items-center justify-center w-8 h-8 rounded-[20px] shadow-header shrink-0 hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 transition-[filter] duration-150"
-        >
-          <MessagesIcon />
-        </motion.button>
-      </div>
-    </header>
+      <CurrencyModal open={currencyOpen} onClose={closeCurrency} />
+      <ChatPanel open={chatOpen} onClose={closeChat} />
+    </>
   );
 }

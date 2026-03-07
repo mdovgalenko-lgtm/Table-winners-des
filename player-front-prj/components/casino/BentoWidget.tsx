@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { MOTION } from "@/lib/motion";
 
@@ -16,28 +17,41 @@ interface BentoItemProps {
   imageSize: number;
   className?: string;
   layout?: "horizontal" | "vertical";
+  href?: string;
 }
 
-function BentoItem({ label, gradient, image, imageSize, className = "", layout = "vertical" }: BentoItemProps) {
-  return (
+function BentoItem({ label, gradient, image, imageSize, className = "", layout = "vertical", href }: BentoItemProps) {
+  const content = layout === "horizontal" ? (
+    <div className="flex items-start justify-between w-full h-full p-2">
+      <span className="text-white font-bold text-lg">{label}</span>
+      <img src={image} alt="" className="object-cover" style={{ width: imageSize, height: imageSize }} />
+    </div>
+  ) : (
+    <div className="flex flex-col items-center justify-center gap-2 w-full h-full p-2">
+      <img src={image} alt="" className="object-cover" style={{ width: imageSize, height: imageSize }} />
+      <span className="text-white font-bold text-lg text-center">{label}</span>
+    </div>
+  );
+
+  const buttonClasses = href
+    ? "relative overflow-hidden rounded-widget shadow-header-lg w-full h-full"
+    : `relative overflow-hidden rounded-widget shadow-header-lg ${className}`;
+
+  const button = (
     <motion.button
       whileTap={{ scale: MOTION.press.scale }}
-      className={`relative overflow-hidden rounded-widget shadow-header-lg ${className}`}
+      className={buttonClasses}
       style={{ background: gradient }}
     >
-      {layout === "horizontal" ? (
-        <div className="flex items-start justify-between w-full h-full p-2">
-          <span className="text-white font-bold text-lg">{label}</span>
-          <img src={image} alt="" className="object-cover" style={{ width: imageSize, height: imageSize }} />
-        </div>
-      ) : (
-        <div className="flex flex-col items-center justify-center gap-2 w-full h-full p-2">
-          <img src={image} alt="" className="object-cover" style={{ width: imageSize, height: imageSize }} />
-          <span className="text-white font-bold text-lg text-center">{label}</span>
-        </div>
-      )}
+      {content}
     </motion.button>
   );
+
+  if (href) {
+    return <Link href={href} className={`block ${className}`}>{button}</Link>;
+  }
+
+  return button;
 }
 
 export default function BentoWidget() {
@@ -59,6 +73,7 @@ export default function BentoWidget() {
           image={imgTournaments}
           imageSize={56}
           className="flex-1"
+          href="/tournament"
         />
       </div>
 
@@ -86,6 +101,7 @@ export default function BentoWidget() {
             image={imgJackpots}
             imageSize={56}
             className="flex-1"
+            href="/lottery"
           />
         </div>
       </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { SectionHeader } from "./GameSection";
 import { MOTION } from "@/lib/motion";
@@ -13,6 +14,7 @@ function StandardCard({
   players,
   charImage,
   ellipseImage,
+  href,
 }: {
   title: string;
   subtitle: string;
@@ -22,8 +24,9 @@ function StandardCard({
   players?: number;
   charImage: string;
   ellipseImage: string;
+  href?: string;
 }) {
-  return (
+  const card = (
     <motion.button
       whileTap={{ scale: MOTION.press.scale }}
       className="shrink-0 flex gap-3 items-center overflow-hidden snap-center"
@@ -128,6 +131,11 @@ function StandardCard({
       </div>
     </motion.button>
   );
+
+  if (href) {
+    return <Link href={href}>{card}</Link>;
+  }
+  return card;
 }
 
 function GameOfTheMonthCard() {
@@ -202,6 +210,7 @@ export default function TournamentsSection() {
             players={189}
             charImage="/tournaments/tournament-char.png"
             ellipseImage="/tournaments/ellipse.svg"
+            href="/tournament"
           />
           <GameOfTheMonthCard />
           <StandardCard

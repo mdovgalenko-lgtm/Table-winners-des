@@ -1,9 +1,10 @@
 "use client";
 
-import React from "react";
+import React, { useState, useCallback } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { MOTION } from "@/lib/motion";
+import { LoyaltyProgramModal } from "@/components/shared/LoyaltyProgramModal";
 
 /* ─── Icon rendering with Figma-exact insets ─── */
 
@@ -156,7 +157,7 @@ function TopAppBar() {
 
 /* ─── User Card ─── */
 
-function UserCard() {
+function UserCard({ onInfoClick }: { onInfoClick: () => void }) {
   return (
     <div
       className="flex flex-col gap-4 items-start p-3 rounded-[16px] w-full"
@@ -203,7 +204,9 @@ function UserCard() {
                 <span className="text-lg text-primary-400 whitespace-nowrap leading-[16px]">
                   Novice
                 </span>
-                <InfoIcon16 />
+                <button onClick={onInfoClick} aria-label="Loyalty Program info">
+                  <InfoIcon16 />
+                </button>
               </div>
               <span className="flex-1 text-lg text-primary-400 text-right min-w-0 leading-[16px]">
                 23.5%
@@ -223,16 +226,17 @@ function UserCard() {
         </div>
       </div>
 
-      <motion.button
-        whileTap={{ scale: MOTION.press.scale }}
-        whileHover={{ opacity: 0.9 }}
-        className="flex items-center justify-center w-full rounded-[20px]"
-        style={{ height: 32, backgroundColor: "#8352FF" }}
-      >
-        <span className="text-lg font-bold text-white text-center leading-[16px]">
-          Account
-        </span>
-      </motion.button>
+      <motion.div whileTap={{ scale: MOTION.press.scale }} whileHover={{ opacity: 0.9 }} className="w-full">
+        <Link
+          href="/account"
+          className="flex items-center justify-center w-full rounded-[20px]"
+          style={{ height: 32, backgroundColor: "#8352FF" }}
+        >
+          <span className="text-lg font-bold text-white text-center leading-[16px]">
+            Account
+          </span>
+        </Link>
+      </motion.div>
     </div>
   );
 }
@@ -311,10 +315,10 @@ const MENU_GROUPS: MenuGroup[] = [
   {
     items: [
       { icon: "icon-bonuses.svg", label: "Bonuses", href: "/bonuses", right: { badge: 99 } },
-      { icon: "icon-promotions.svg", label: "Promotions" },
-      { icon: "icon-tournaments.svg", label: "Tournaments", right: { badge: 99 } },
-      { icon: "icon-contests.svg", label: "Contests" },
-      { icon: "icon-lotteries.svg", label: "Lotteries" },
+      { icon: "icon-promotions.svg", label: "Promotions", href: "/promotions" },
+      { icon: "icon-tournaments.svg", label: "Tournaments", href: "/tournament", right: { badge: 99 } },
+      { icon: "icon-contests.svg", label: "Contests", href: "/contest" },
+      { icon: "icon-lotteries.svg", label: "Lotteries", href: "/lottery" },
       { icon: "icon-festival.svg", label: "Spring Grand Festival" },
     ],
   },
@@ -420,6 +424,9 @@ function NavGroupCard({ group }: { group: MenuGroup }) {
 /* ─── Main export ─── */
 
 export default function MenuContent() {
+  const [loyaltyOpen, setLoyaltyOpen] = useState(false);
+  const closeLoyalty = useCallback(() => setLoyaltyOpen(false), []);
+
   return (
     <>
       <TopAppBar />
@@ -429,7 +436,7 @@ export default function MenuContent() {
         style={{ backgroundColor: "#1F1E2E" }}
       >
         <div className="flex flex-col gap-4 px-4 pt-2 pb-4">
-          <UserCard />
+          <UserCard onInfoClick={() => setLoyaltyOpen(true)} />
           <BonusBalance />
 
           {MENU_GROUPS.map((group, idx) => (
@@ -437,6 +444,8 @@ export default function MenuContent() {
           ))}
         </div>
       </main>
+
+      <LoyaltyProgramModal open={loyaltyOpen} onClose={closeLoyalty} />
     </>
   );
 }
