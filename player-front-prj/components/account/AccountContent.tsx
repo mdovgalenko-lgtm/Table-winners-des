@@ -308,8 +308,8 @@ function AchievementCard({ item }: { item: Achievement }) {
       )}
       {item.progress && typeof item.progress === "object" && (
         <div className="flex gap-2 items-center">
-          {Array.from({ length: item.progress.total }).map((_, i) => (
-            <ProgressDot key={i} filled={i < item.progress!.filled} />
+          {Array.from({ length: (item.progress as { filled: number; total: number }).total }).map((_, i) => (
+            <ProgressDot key={i} filled={i < (item.progress as { filled: number; total: number }).filled} />
           ))}
         </div>
       )}
