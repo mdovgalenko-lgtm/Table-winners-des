@@ -1,0 +1,9 @@
+<svg preserveAspectRatio="xMidYMid meet" width="100%" height="100%" viewBox="0 0 22.5 22.5" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="Sign" fill-rule="evenodd" clip-rule="evenodd" d="M11.2954 17.1696L14.7639 12.7095H12.7482L9.89709 9.24658H22.5L12.0218 22.3187C11.931 22.4275 11.7857 22.5 11.6404 22.5H10.9867C10.8414 22.5 10.6961 22.4275 10.6053 22.3187L0 9.15592H4.93947L11.2772 17.1334V17.1696H11.2954ZM15.5811 4.04311H6.95521L4.93947 7.27035H0.0544794L3.75908 0.543916C3.86804 0.235697 4.14044 0 4.48547 0H18.0508C18.3959 0 18.6683 0.235697 18.7772 0.543916L22.4818 7.28848H17.615L15.5993 4.06124H15.563L15.5811 4.04311Z" fill="url(#paint0_linear_0_2746)"/>
+<defs>
+<linearGradient id="paint0_linear_0_2746" x1="3.54116" y1="-6.16438" x2="18.0145" y2="20.8877" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F39628"/>
+<stop offset="1" stop-color="#A80BEB"/>
+</linearGradient>
+</defs>
+</svg>

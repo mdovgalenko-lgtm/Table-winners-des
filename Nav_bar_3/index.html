@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Player Front</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <div class="header-logo">
+      <img src="assets/d624c195-998f-47c9-b20f-8e701032f4c5.svg" alt="Logo">
+    </div>
+    <div class="header-right">
+      <div class="currency-select">
+        <div class="currency-text-icon">
+          <img class="currency-icon" src="assets/30fd81a4-3e85-4dcd-9df1-738a2117ff74.svg" alt="EUR">
+          <span class="currency-amount">7500.00</span>
+        </div>
+        <img class="currency-arrow" src="assets/248d4ec4-2fcf-4623-9242-72722c1100ee.svg" alt="Arrow">
+      </div>
+      <div class="header-icon-btn header-icon-btn--wallet">
+        <img src="assets/f7fc24bd-f481-4029-8242-081d839c26fa.svg" alt="Wallet">
+      </div>
+      <div class="header-icon-btn header-icon-btn--messages">
+        <img src="assets/9eaf16c9-cf2d-4e3d-8048-36a68ca68047.svg" alt="Messages">
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== CONTENT ==================== -->
+  <div class="content">
+
+    <!-- Banners -->
+    <div class="section banners">
+      <div class="banner banner--gradient-6">
+        <div class="banner-text">
+          <div class="banner-title">Welcome Gifts! Cash bonus up to ₱100,000 + 200 free</div>
+          <div class="banner-subtitle">Sub text: is simply dummy text of the printing and typesetting</div>
+          <div class="banner-button">Button</div>
+        </div>
+        <div class="banner-image">
+          <img src="assets/7dbe9793-9e18-452a-abd5-f258f3109347.png" alt="Banner">
+        </div>
+      </div>
+    </div>
+
+    <!-- Bento Widget -->
+    <div class="section bento-widget">
+      <div class="bento-col">
+        <div class="bento-card bento-card--top">
+          <span class="bento-card-label">Top</span>
+          <div class="bento-card-icon">
+            <img src="assets/568e5591-ddc3-44d3-8606-0b23d725c2ae.png" alt="Top">
+          </div>
+        </div>
+        <div class="bento-card bento-card--tournaments">
+          <div class="bento-card-icon bento-card-icon--small">
+            <img src="assets/145e8972-4ba2-4e75-990a-506e7c5e4006.png" alt="Tournaments">
+          </div>
+          <span class="bento-card-label bento-card-label--center">Tournaments</span>
+        </div>
+      </div>
+      <div class="bento-col">
+        <div class="bento-card bento-card--new">
+          <span class="bento-card-label">New</span>
+          <div class="bento-card-icon">
+            <img src="assets/6efded79-36af-4f49-8e3e-67e8de1fc228.png" alt="New">
+          </div>
+        </div>
+        <div class="bento-row">
+          <div class="bento-card bento-card--slots">
+            <div class="bento-card-icon bento-card-icon--small">
+              <img src="assets/4c6da701-3490-473e-8f21-aa207a4ff4cc.png" alt="Slots">
+            </div>
+            <span class="bento-card-label bento-card-label--center">Slots</span>
+          </div>
+          <div class="bento-card bento-card--lotteries">
+            <div class="bento-card-icon bento-card-icon--small">
+              <img src="assets/807135b6-65bf-4bf1-a65d-b9e3ad9d5526.png" alt="Lotteries">
+            </div>
+            <span class="bento-card-label bento-card-label--center">Lotteries</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search + Tabs -->
+    <div class="section search-tabs">
+      <div class="search-tab search-tab--icon">
+        <img src="assets/ca262a6d-a2e0-4d9e-b0c4-4ee1a2a0c16c.svg" alt="Search">
+      </div>
+      <div class="search-tab"><span class="search-tab-label">Top</span></div>
+      <div class="search-tab"><span class="search-tab-label">Slots</span></div>
+      <div class="search-tab"><span class="search-tab-label">New</span></div>
+      <div class="search-tab"><span class="search-tab-label">Jackpots</span></div>
+      <div class="search-tab"><span class="search-tab-label">Crash Games</span></div>
+    </div>
+
+    <!-- Your Recent -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Your Recent</span>
+        <div class="see-all-btn">
+          <span>See All</span>
+          <img src="assets/fa484426-7b9a-4ad7-91e1-9c7f3e193c14.svg" alt="Arrow">
+        </div>
+      </div>
+      <div class="game-cards-container">
+        <div class="game-cards-row">
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/955dc42b-92ec-46eb-88c9-aa640406ca3b.png" alt="Game">
+            <div class="game-card-badge"><span>🔒 Locked</span></div>
+            <div class="game-card-footer">
+              <img src="assets/edf542fd-6122-4589-ab1a-926b24cda12f.svg" alt="Provider">
+              <img src="assets/aececb5d-dec0-4e37-b886-f1ef878e2541.svg" alt="Info">
+            </div>
+          </div>
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/77044d10-3a1e-4574-b76f-98f2db0ffc28.png" alt="Game">
+            <div class="game-card-footer">
+              <img src="assets/b142de4b-9434-4290-bf6b-66f57c099236.svg" alt="Provider">
+              <img src="assets/aececb5d-dec0-4e37-b886-f1ef878e2541.svg" alt="Info">
+            </div>
+          </div>
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/4ceee110-a5cf-483c-91c8-37f7a05c9cac.png" alt="Game">
+            <div class="game-card-footer">
+              <img src="assets/37015e65-c71b-42ce-baf7-8af2e37e902b.svg" alt="Provider">
+              <img src="assets/aececb5d-dec0-4e37-b886-f1ef878e2541.svg" alt="Info">
+            </div>
+          </div>
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/f9fd235a-0517-451a-9df2-1ec00bbd5072.png" alt="Game">
+            <div class="game-card-footer">
+              <img src="assets/0046c616-9974-4b6b-8c34-a18e57342705.svg" alt="Provider">
+              <img src="assets/aececb5d-dec0-4e37-b886-f1ef878e2541.svg" alt="Info">
+            </div>
+          </div>
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/ac8e6ca9-f23a-4cc6-8c83-fce54978def8.png" alt="Game">
+            <div class="game-card-footer">
+              <img src="assets/0b6ce435-7ac5-4662-9dae-9c06382cb998.svg" alt="Provider">
+              <img src="assets/aececb5d-dec0-4e37-b886-f1ef878e2541.svg" alt="Info">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Providers -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Providers</span>
+      </div>
+      <div class="providers-grid">
+        <div class="providers-row">
+          <div class="provider-logo"><img src="assets/2032ebd6-d2d8-49ee-b201-d9efb17e0c9a.svg" alt="Netent"></div>
+          <div class="provider-logo"><img src="assets/7bb351ad-3f13-4351-8e36-c0cc930a821c.svg" alt="Push Gaming"></div>
+          <div class="provider-logo"><img src="assets/0f25844c-4a88-463e-b7d9-f62e74aefb46.svg" alt="Quickspin"></div>
+          <div class="provider-logo"><img src="assets/13f09577-4f32-4fa4-a81b-d226f57f3458.svg" alt="Provider"></div>
+        </div>
+        <div class="providers-row">
+          <div class="provider-logo"><img src="assets/a1273cc9-27b6-42d1-ba24-b817c8bef453.svg" alt="Playson"></div>
+          <div class="provider-logo"><img src="assets/cc52b19e-715b-4f95-b29d-6e93238e7b34.svg" alt="Evolution"></div>
+          <div class="provider-logo"><img src="assets/f08cff67-4ffd-4284-88dd-a2ed0c7b7b7f.svg" alt="Elk"></div>
+          <div class="provider-logo"><img src="assets/72bc7e33-4b87-45b3-9f6f-ab30b407adc1.svg" alt="Piastrix"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Top</span>
+        <div class="see-all-btn">
+          <span>See All</span>
+          <img src="assets/472170d2-4ebe-499a-9a19-5240e2aa98b1.svg" alt="Arrow">
+        </div>
+      </div>
+      <div class="game-cards-container">
+        <div class="game-cards-row">
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/4eb48efb-4eed-495a-b012-b8ae60a92808.png" alt="Game">
+            <div class="game-card-badge"><span>€ 500,000,000.00</span></div>
+            <div class="game-card-footer">
+              <img src="assets/0e2e419b-688d-4cec-9701-893c8bf4a67c.svg" alt="Provider">
+              <img src="assets/668c9071-fdb2-462c-acd8-20819e13e049.svg" alt="Info">
+            </div>
+          </div>
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/d23ff595-d5f9-44d3-bee0-1addfae1df34.png" alt="Game">
+            <div class="game-card-badge"><span>Exclusive</span></div>
+            <div class="game-card-footer">
+              <img src="assets/a75f935d-fe57-46ff-b712-403b76e5d429.svg" alt="Provider">
+              <img src="assets/668c9071-fdb2-462c-acd8-20819e13e049.svg" alt="Info">
+            </div>
+          </div>
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/4ef5ed79-3e21-477e-bf57-1cc581a60b66.png" alt="Game">
+            <div class="game-card-badge"><span>Trending</span></div>
+            <div class="game-card-footer">
+              <img src="assets/aa924714-adf0-4ad1-8a67-70b544f70978.svg" alt="Provider">
+              <img src="assets/668c9071-fdb2-462c-acd8-20819e13e049.svg" alt="Info">
+            </div>
+          </div>
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/d8e42e35-e313-4e36-af61-bf5301b8088e.png" alt="Game">
+            <div class="game-card-badge"><span>New</span></div>
+            <div class="game-card-footer">
+              <img src="assets/a75f935d-fe57-46ff-b712-403b76e5d429.svg" alt="Provider">
+              <img src="assets/668c9071-fdb2-462c-acd8-20819e13e049.svg" alt="Info">
+            </div>
+          </div>
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/b9251650-4a4e-4307-9e79-b0f41d5e90eb.png" alt="Game">
+            <div class="game-card-badge"><span>Collection</span></div>
+            <div class="game-card-footer">
+              <img src="assets/0e2e419b-688d-4cec-9701-893c8bf4a67c.svg" alt="Provider">
+              <img src="assets/668c9071-fdb2-462c-acd8-20819e13e049.svg" alt="Info">
+            </div>
+          </div>
+        </div>
+        <div class="game-cards-row">
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/b645cdc4-4bba-4b9a-99fd-38fdf6e2b74e.png" alt="Game">
+            <div class="game-card-badge"><span>Mood</span></div>
+            <div class="game-card-footer">
+              <img src="assets/a75f935d-fe57-46ff-b712-403b76e5d429.svg" alt="Provider">
+              <img src="assets/668c9071-fdb2-462c-acd8-20819e13e049.svg" alt="Info">
+            </div>
+          </div>
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/8c5ead2f-2b0e-4992-99be-53f7686f8720.png" alt="Game">
+            <div class="game-card-badge"><span>€ 20,000.00</span></div>
+            <div class="game-card-footer">
+              <img src="assets/0e2e419b-688d-4cec-9701-893c8bf4a67c.svg" alt="Provider">
+              <img src="assets/668c9071-fdb2-462c-acd8-20819e13e049.svg" alt="Info">
+            </div>
+          </div>
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/f4d6d79b-dd06-4dcd-8f4b-999eb68a6e75.png" alt="Game">
+            <div class="game-card-badge"><span>Limited</span></div>
+            <div class="game-card-footer">
+              <img src="assets/2498e5e8-987b-4732-92f4-2795f16b3343.svg" alt="Provider">
+              <img src="assets/668c9071-fdb2-462c-acd8-20819e13e049.svg" alt="Info">
+            </div>
+          </div>
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/a0cc0ba8-68b3-41f0-aba4-1f0894cd3327.png" alt="Game">
+            <div class="game-card-badge"><span>Elite</span></div>
+            <div class="game-card-footer">
+              <img src="assets/a75f935d-fe57-46ff-b712-403b76e5d429.svg" alt="Provider">
+              <img src="assets/668c9071-fdb2-462c-acd8-20819e13e049.svg" alt="Info">
+            </div>
+          </div>
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/306c825b-b2d5-4e94-8e49-95ecc6697341.png" alt="Game">
+            <div class="game-card-badge"><span>Seasonal</span></div>
+            <div class="game-card-footer">
+              <img src="assets/aa924714-adf0-4ad1-8a67-70b544f70978.svg" alt="Provider">
+              <img src="assets/668c9071-fdb2-462c-acd8-20819e13e049.svg" alt="Info">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Game Collection Widget -->
+    <div class="section">
+      <div class="game-collection-widget">
+        <div class="game-collection-top">
+          <img class="game-collection-bg" src="assets/c03531b6-c9ad-4492-bdc0-3e17eb16e01a.png" alt="BG">
+          <div class="game-collection-overlay"></div>
+          <div class="game-collection-logo">
+            <img src="assets/d1dcd1fa-bed7-454c-a737-bc2c6888de14.svg" alt="Pragmatic Play">
+          </div>
+          <span class="game-collection-name">Pragramatic Play</span>
+          <div class="game-collection-btn">Show More</div>
+        </div>
+        <div class="game-collection-bottom">
+          <div class="game-collection-icon"><img src="assets/7f0cfef7-6faf-483c-aa81-cd77f0111cb7.png" alt="Game"></div>
+          <div class="game-collection-icon"><img src="assets/672fedfc-1a3b-4245-8bb8-3a1f4ad42d21.png" alt="Game"></div>
+          <div class="game-collection-icon"><img src="assets/6a3f189b-e516-43f2-a3bd-1c9065397714.png" alt="Game"></div>
+          <div class="game-collection-icon"><img src="assets/70896f2c-d9da-46a3-b097-8bcc9af3769f.png" alt="Game"></div>
+          <div class="game-collection-icon"><img src="assets/eb3f9e58-4bfe-4dcb-9071-7a9af6fe30f7.png" alt="Game"></div>
+          <div class="game-collection-icon"><img src="assets/47a55f67-c008-478d-96c7-728e9a8bd811.png" alt="Game"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top Dealers -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Top Dealers</span>
+        <div class="see-all-btn">
+          <span>See All</span>
+          <img src="assets/f47c98a4-9234-4661-a20f-0e209030c497.svg" alt="Arrow">
+        </div>
+      </div>
+      <div class="live-casino-cards">
+        <div class="live-casino-card">
+          <div class="live-casino-card-img">
+            <img src="assets/de2d93e8-b881-4f29-9200-3a88137af086.png" alt="Roulette">
+          </div>
+          <div class="live-casino-fogging"></div>
+          <div class="live-casino-results">
+            <div class="roulette-number roulette-number--red">1</div>
+            <div class="roulette-number roulette-number--green">0</div>
+            <div class="roulette-number roulette-number--black">2</div>
+            <div class="roulette-number roulette-number--green">00</div>
+            <div class="roulette-number roulette-number--red">1</div>
+            <div class="roulette-number roulette-number--black">2</div>
+            <div class="roulette-number roulette-number--red">1</div>
+          </div>
+          <div class="live-casino-label">€0.1-€5K</div>
+          <div class="live-casino-flag">
+            <img src="assets/f75e91af-4e8d-4d1e-b168-35a2448c7b8f.svg" alt="Flag">
+          </div>
+          <div class="live-casino-title">Speed Auto Roulette</div>
+          <div class="live-casino-members">
+            <img src="assets/52f94988-684e-4b6b-8f27-ce7da200a65e.svg" alt="Members">
+            <span>8.1K</span>
+          </div>
+        </div>
+        <div class="live-casino-card">
+          <div class="live-casino-card-img">
+            <img src="assets/15813b10-db84-42bb-be2f-6b8677f2ccd0.png" alt="Baccarat">
+          </div>
+          <div class="live-casino-fogging"></div>
+          <div class="live-casino-results">
+            <div class="roulette-number roulette-number--red">1</div>
+            <div class="roulette-number roulette-number--green">0</div>
+            <div class="roulette-number roulette-number--black">2</div>
+            <div class="roulette-number roulette-number--green">00</div>
+            <div class="roulette-number roulette-number--red">1</div>
+            <div class="roulette-number roulette-number--black">2</div>
+            <div class="roulette-number roulette-number--red">1</div>
+          </div>
+          <div class="live-casino-label">€0.1-€5K</div>
+          <div class="live-casino-flag">
+            <img src="assets/f75e91af-4e8d-4d1e-b168-35a2448c7b8f.svg" alt="Flag">
+          </div>
+          <div class="live-casino-title">Speed Auto Roulette</div>
+          <div class="live-casino-members">
+            <img src="assets/52f94988-684e-4b6b-8f27-ce7da200a65e.svg" alt="Members">
+            <span>8.1K</span>
+          </div>
+        </div>
+        <div class="live-casino-card">
+          <div class="live-casino-card-img">
+            <img src="assets/7017884e-bf7b-440f-a5cc-2edcefaf6aad.png" alt="Game">
+          </div>
+          <div class="live-casino-fogging"></div>
+          <div class="live-casino-results">
+            <div class="roulette-number roulette-number--red">1</div>
+            <div class="roulette-number roulette-number--green">0</div>
+            <div class="roulette-number roulette-number--black">2</div>
+            <div class="roulette-number roulette-number--green">00</div>
+            <div class="roulette-number roulette-number--red">1</div>
+            <div class="roulette-number roulette-number--black">2</div>
+            <div class="roulette-number roulette-number--red">1</div>
+          </div>
+          <div class="live-casino-label">€0.1-€5K</div>
+          <div class="live-casino-flag">
+            <img src="assets/f75e91af-4e8d-4d1e-b168-35a2448c7b8f.svg" alt="Flag">
+          </div>
+          <div class="live-casino-title">Speed Auto Roulette</div>
+          <div class="live-casino-members">
+            <img src="assets/52f94988-684e-4b6b-8f27-ce7da200a65e.svg" alt="Members">
+            <span>8.1K</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jackpots (labeled "New" in Figma) -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">New</span>
+        <div class="see-all-btn">
+          <span>See All</span>
+          <img src="assets/472170d2-4ebe-499a-9a19-5240e2aa98b1.svg" alt="Arrow">
+        </div>
+      </div>
+      <div class="game-cards-container">
+        <div class="game-cards-row">
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/4eb48efb-4eed-495a-b012-b8ae60a92808.png" alt="Game">
+            <div class="game-card-badge"><span>€ 500,000,000.00</span></div>
+          </div>
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/d23ff595-d5f9-44d3-bee0-1addfae1df34.png" alt="Game">
+            <div class="game-card-badge"><span>Exclusive</span></div>
+          </div>
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/4ef5ed79-3e21-477e-bf57-1cc581a60b66.png" alt="Game">
+            <div class="game-card-badge"><span>Trending</span></div>
+          </div>
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/d8e42e35-e313-4e36-af61-bf5301b8088e.png" alt="Game">
+            <div class="game-card-badge"><span>New</span></div>
+          </div>
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/b9251650-4a4e-4307-9e79-b0f41d5e90eb.png" alt="Game">
+            <div class="game-card-badge"><span>Collection</span></div>
+          </div>
+        </div>
+        <div class="game-cards-row">
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/b645cdc4-4bba-4b9a-99fd-38fdf6e2b74e.png" alt="Game">
+            <div class="game-card-badge"><span>Mood</span></div>
+          </div>
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/8c5ead2f-2b0e-4992-99be-53f7686f8720.png" alt="Game">
+            <div class="game-card-badge"><span>€ 20,000.00</span></div>
+          </div>
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/f4d6d79b-dd06-4dcd-8f4b-999eb68a6e75.png" alt="Game">
+            <div class="game-card-badge"><span>Limited</span></div>
+          </div>
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/a0cc0ba8-68b3-41f0-aba4-1f0894cd3327.png" alt="Game">
+            <div class="game-card-badge"><span>Elite</span></div>
+          </div>
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/306c825b-b2d5-4e94-8e49-95ecc6697341.png" alt="Game">
+            <div class="game-card-badge"><span>Seasonal</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Payment Methods -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Payment Methods</span>
+      </div>
+      <div class="payment-methods">
+        <div class="provider-logo"><img src="assets/edd9db33-374a-4322-837e-6905327f815e.svg" alt="Visa"></div>
+        <div class="provider-logo"><img src="assets/11f49fc9-2797-4795-96ed-914fe1e5453a.svg" alt="MasterCard"></div>
+        <div class="provider-logo"><img src="assets/d3317e2b-c111-4d42-8b3e-c9d1fc16552b.svg" alt="Mobile Commerce"></div>
+      </div>
+    </div>
+
+    <!-- Tournaments -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Tournaments</span>
+        <div class="see-all-btn">
+          <span>See All</span>
+          <img src="assets/428a607d-42ee-4b62-b92a-1d772107610b.svg" alt="Arrow">
+        </div>
+      </div>
+      <div class="tournament-cards">
+        <!-- Tournament Widget 1 -->
+        <div class="tournament-widget">
+          <div class="tournament-widget-image">
+            <div class="tournament-widget-image-bg"></div>
+            <img class="tournament-widget-avatar" src="assets/ffea813d-7359-44c1-b3e7-08e0187db521.png" alt="Tournament">
+            <div class="tournament-widget-players">
+              <img src="assets/b3c14b89-e4aa-4426-a5d9-d94615d6c092.svg" alt="Members" style="width:16px;height:16px;">
+              <span>189</span>
+            </div>
+          </div>
+          <div class="tournament-widget-content">
+            <div class="tournament-widget-info">
+              <div class="tournament-widget-title">Private Club Tournament</div>
+              <div class="tournament-widget-subtitle">Points for every win</div>
+              <div class="tournament-widget-prize">€4,365.17</div>
+              <div class="tournament-widget-rank">Rank: <span>50</span></div>
+              <div class="tournament-widget-timer">
+                <span class="tournament-widget-timer-label">Ends in</span>
+                <div class="tournament-widget-countdown">
+                  <span class="countdown-unit">24d</span>
+                  <span class="countdown-unit">14h 23m</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Game of the Month Widget -->
+        <div class="game-of-month-widget">
+          <div class="game-of-month-cards">
+            <div class="game-of-month-col">
+              <div class="game-of-month-placeholder"></div>
+              <div class="game-of-month-card-img">
+                <img src="assets/720c62fd-e852-4089-97ad-8e22764edac8.png" alt="Game">
+              </div>
+              <div class="game-of-month-placeholder"></div>
+            </div>
+            <div class="game-of-month-col">
+              <div class="game-of-month-placeholder"></div>
+              <div class="game-of-month-placeholder"></div>
+              <div class="game-of-month-card-img">
+                <img src="assets/7251578e-eb86-49f0-bdd5-d9fc17816ff6.png" alt="Game">
+              </div>
+              <div class="game-of-month-placeholder"></div>
+            </div>
+          </div>
+          <div class="game-of-month-text">
+            <div>Games of</div>
+            <div>the Month</div>
+          </div>
+        </div>
+        <!-- Tournament Widget 2 (Promo) -->
+        <div class="tournament-widget">
+          <div class="tournament-widget-image">
+            <div class="tournament-widget-image-bg tournament-widget-image-bg--promo"></div>
+            <img class="tournament-widget-avatar" src="assets/7af13c7b-ef2e-4fbb-922a-14844b658565.png" alt="Promo">
+          </div>
+          <div class="tournament-widget-content">
+            <div class="tournament-widget-info">
+              <div class="tournament-widget-title">Claim €160 000!</div>
+              <div class="tournament-widget-subtitle">The Wilde Legends Network promotion is in full swing!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sport Events -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Sport Events</span>
+        <div class="see-all-btn">
+          <span>See All</span>
+          <img src="assets/993cb41b-153d-43af-a124-835733f9b4e3.svg" alt="Arrow">
+        </div>
+      </div>
+      <div class="sport-events-cards">
+        <div class="sport-event-card">
+          <img src="assets/01bc32ec-f2e7-408e-9c19-d45a8d6687eb.png" alt="Sport Event">
+        </div>
+        <div class="sport-event-card">
+          <img src="assets/4e45a00d-39f3-4325-8aac-4f4eec0840d8.png" alt="Sport Event">
+        </div>
+      </div>
+    </div>
+
+    <!-- Random Games -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Random Games</span>
+        <div class="see-all-btn">
+          <span>See All</span>
+          <img src="assets/472170d2-4ebe-499a-9a19-5240e2aa98b1.svg" alt="Arrow">
+        </div>
+      </div>
+      <div class="game-cards-container">
+        <div class="game-cards-row">
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/4eb48efb-4eed-495a-b012-b8ae60a92808.png" alt="Game">
+            <div class="game-card-badge"><span>€ 500,000,000.00</span></div>
+          </div>
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/d23ff595-d5f9-44d3-bee0-1addfae1df34.png" alt="Game">
+            <div class="game-card-badge"><span>Exclusive</span></div>
+          </div>
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/4ef5ed79-3e21-477e-bf57-1cc581a60b66.png" alt="Game">
+            <div class="game-card-badge"><span>Trending</span></div>
+          </div>
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/d8e42e35-e313-4e36-af61-bf5301b8088e.png" alt="Game">
+            <div class="game-card-badge"><span>New</span></div>
+          </div>
+          <div class="game-card">
+            <img class="game-card-bg" src="assets/b9251650-4a4e-4307-9e79-b0f41d5e90eb.png" alt="Game">
+            <div class="game-card-badge"><span>Collection</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top Winners -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Top Winners</span>
+      </div>
+      <div class="top-winners-list">
+        <!-- Winner 1 -->
+        <div class="winner-row">
+          <div class="winner-game-icon">
+            <img src="assets/1f51e6af-430b-432f-9796-947a5ea66ea6.png" alt="Game">
+          </div>
+          <div class="winner-info">
+            <div class="winner-game-name">Olympus Wins</div>
+            <div class="winner-username">@hudsonAmory</div>
+          </div>
+          <div class="winner-prize">
+            <div class="winner-amount">€3780.60</div>
+            <div class="winner-multiplier">x100</div>
+          </div>
+          <img class="winner-arrow" src="assets/1f142288-95b7-4146-b188-9ccb7755a2c4.svg" alt="Arrow">
+        </div>
+        <div class="winners-divider"></div>
+        <!-- Winner 2 -->
+        <div class="winner-row">
+          <div class="winner-game-icon">
+            <img src="assets/10848682-ea85-4b4c-ab42-8f0ead385bd2.png" alt="Game">
+          </div>
+          <div class="winner-info">
+            <div class="winner-game-name">Haunted Reels</div>
+            <div class="winner-username">@hudsonAmory</div>
+          </div>
+          <div class="winner-prize">
+            <div class="winner-amount">€3780.60</div>
+            <div class="winner-multiplier">x100</div>
+          </div>
+          <img class="winner-arrow" src="assets/1f142288-95b7-4146-b188-9ccb7755a2c4.svg" alt="Arrow">
+        </div>
+        <div class="winners-divider"></div>
+        <!-- Winner 3 -->
+        <div class="winner-row">
+          <div class="winner-game-icon">
+            <img src="assets/af8159bb-c5b6-4e09-8ff0-42232b0a2b39.png" alt="Game">
+          </div>
+          <div class="winner-info">
+            <div class="winner-game-name">Book of Madness</div>
+            <div class="winner-username">@hudsonAmory</div>
+          </div>
+          <div class="winner-prize">
+            <div class="winner-amount">€3780.60</div>
+            <div class="winner-multiplier">x100</div>
+          </div>
+          <img class="winner-arrow" src="assets/1f142288-95b7-4146-b188-9ccb7755a2c4.svg" alt="Arrow">
+        </div>
+        <div class="winners-divider"></div>
+        <!-- Winner 4 -->
+        <div class="winner-row">
+          <div class="winner-game-icon">
+            <img src="assets/4935c929-4805-4e64-800b-5f03c5c3bb73.png" alt="Game">
+          </div>
+          <div class="winner-info">
+            <div class="winner-game-name">Lobster House</div>
+            <div class="winner-username">@hudsonAmory</div>
+          </div>
+          <div class="winner-prize">
+            <div class="winner-amount">€3780.60</div>
+            <div class="winner-multiplier">x100</div>
+          </div>
+          <img class="winner-arrow" src="assets/1f142288-95b7-4146-b188-9ccb7755a2c4.svg" alt="Arrow">
+        </div>
+        <div class="winners-divider"></div>
+        <!-- Winner 5 -->
+        <div class="winner-row">
+          <div class="winner-game-icon">
+            <img src="assets/7e7e3773-a12a-4d92-9791-6cb404ea2015.png" alt="Game">
+          </div>
+          <div class="winner-info">
+            <div class="winner-game-name">Blazing Frenzy</div>
+            <div class="winner-username">@hudsonAmory</div>
+          </div>
+          <div class="winner-prize">
+            <div class="winner-amount">€3780.60</div>
+            <div class="winner-multiplier">x100</div>
+          </div>
+          <img class="winner-arrow" src="assets/1f142288-95b7-4146-b188-9ccb7755a2c4.svg" alt="Arrow">
+        </div>
+        <div class="winners-divider"></div>
+        <!-- Winner 6 -->
+        <div class="winner-row">
+          <div class="winner-game-icon">
+            <img src="assets/1f51e6af-430b-432f-9796-947a5ea66ea6.png" alt="Game">
+          </div>
+          <div class="winner-info">
+            <div class="winner-game-name">5 Joker Hit</div>
+            <div class="winner-username">@hudsonAmory</div>
+          </div>
+          <div class="winner-prize">
+            <div class="winner-amount">€3780.60</div>
+            <div class="winner-multiplier">x100</div>
+          </div>
+          <img class="winner-arrow" src="assets/1f142288-95b7-4146-b188-9ccb7755a2c4.svg" alt="Arrow">
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-text-block">
+        <div class="footer-heading">Vegangster Casino: Your Ultimate Online Casino Experience</div>
+        <div class="footer-description">Welcome to Vegangster Casino, where we redefine what an online casino should be. Our platform offers an exhilarating blend of top-notch casino games, rewarding promotions, and first-rate customer service. Join us today for an unparalleled gambling experience.</div>
+        <div class="see-all-btn">
+          <span>Show More</span>
+          <img src="assets/08adf865-d085-4db2-9eb9-353f5de0ae6a.svg" alt="Arrow">
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-pages">
+        <a href="#" class="footer-page-link footer-page-link--brand">Terms and Conditions</a>
+        <a href="#" class="footer-page-link">Privacy Policy</a>
+        <a href="#" class="footer-page-link">Contact Us</a>
+        <a href="#" class="footer-page-link">Betting Rules</a>
+        <a href="#" class="footer-page-link">VIP Loyalty Program</a>
+      </div>
+      <div class="footer-social">
+        <img class="footer-social-img" src="assets/60d99f56-de08-493e-bf99-6349c523caa0.svg" alt="Instagram">
+        <img class="footer-social-img" src="assets/5e8400f6-900c-4e8b-952f-2311af75350a.svg" alt="Twitter">
+        <img class="footer-social-img" src="assets/6608be06-5211-42cb-8299-b3de968b360b.svg" alt="Telegram">
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-partners">
+        <img src="assets/45f3730c-e823-4f75-bc31-0acd8dde7158.svg" alt="18+" style="width:24px;height:24px;">
+        <img src="assets/b17cce22-38ad-40e7-8d65-9c269b3e4981.svg" alt="Gambling Therapy" style="width:50.769px;height:24px;">
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-copyright">© 2024 Your Casino. All rights reserved. Licensed and regulated by [Licensing Authority], License Number [000000].</div>
+    </div>
+
+  </div><!-- end content -->
+
+  <!-- ==================== NAV BAR ==================== -->
+  <nav class="nav-bar">
+    <div class="bottom-navigation">
+      <div class="nav-unit" data-tab="bonuses">
+        <div class="nav-unit-icon">
+          <img src="assets/52a18b5f-f405-4232-8dfe-694f4f0d8449.svg" alt="Bonuses">
+        </div>
+        <span class="nav-unit-label">Bonuses</span>
+        <div class="nav-badge">2</div>
+      </div>
+      <div class="nav-unit nav-unit--active" data-tab="casino">
+        <div class="nav-unit-icon">
+          <img src="assets/6b6daff9-4ba3-4845-b2f9-5ed10a0ec9d2.svg" alt="Casino">
+        </div>
+        <span class="nav-unit-label">Casino</span>
+      </div>
+      <div class="nav-unit" data-tab="live">
+        <div class="nav-unit-icon">
+          <img src="assets/b09ba116-2064-4ebe-aa6a-dd064ffab6d8.svg" alt="Live Casino">
+        </div>
+        <span class="nav-unit-label">Live Casino</span>
+      </div>
+      <div class="nav-unit" data-tab="sports">
+        <div class="nav-unit-icon">
+          <img src="assets/95c22038-5c87-42dc-9028-9110362d82ec.svg" alt="Sports">
+        </div>
+        <span class="nav-unit-label">Sports</span>
+      </div>
+      <div class="nav-unit" data-tab="chat">
+        <div class="nav-unit-icon">
+          <img src="assets/c2363871-9f8e-4429-86ae-ce5747588748.svg" alt="Chat">
+        </div>
+        <span class="nav-unit-label">Chat</span>
+      </div>
+      <div class="nav-unit" data-tab="menu">
+        <div class="nav-unit-icon">
+          <img src="assets/452b2a67-88e4-4a28-aed3-fa1210edf8ae.svg" alt="Menu">
+        </div>
+        <span class="nav-unit-label">Menu</span>
+      </div>
+    </div>
+    <div class="home-indicator">
+      <div class="home-indicator-line"></div>
+    </div>
+  </nav>
+
+  <script>
+    document.querySelectorAll('.nav-unit').forEach(unit => {
+      unit.addEventListener('click', () => {
+        const current = document.querySelector('.nav-unit--active');
+        if (current === unit) return;
+        if (current) current.classList.remove('nav-unit--active');
+        unit.classList.add('nav-unit--active');
+      });
+    });
+  </script>
+
+</div><!-- end app-container -->
+
+</body>
+</html>
