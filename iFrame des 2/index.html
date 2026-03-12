@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vegangster - Player Front</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+      <div class="header__logo-sections">
+        <div class="header__logo-group">
+          <div class="header__burger">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 7H20" stroke="#9292AA" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M4 12H20" stroke="#9292AA" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M4 17H20" stroke="#9292AA" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="header__logo-full">
+            <img src="https://www.figma.com/api/mcp/asset/9147eff0-9d42-4bd9-b137-d7baecdb63ac" alt="Vegangster">
+          </div>
+          <div class="header__logo-icon">
+            <img src="https://www.figma.com/api/mcp/asset/98fc7c98-e4db-40b3-98d0-ecdf552ffd22" alt="Vegangster">
+          </div>
+        </div>
+        <nav class="header__nav-tabs">
+          <div class="header__tab header__tab--active">
+            <span class="header__tab-icon">
+              <img src="https://www.figma.com/api/mcp/asset/2f5d63f6-05f8-4de9-bf49-53b39fbefd90" alt="">
+            </span>
+            <span>Casino</span>
+          </div>
+          <div class="header__tab">
+            <span class="header__tab-icon">
+              <img src="https://www.figma.com/api/mcp/asset/afcad1c2-6740-48f9-ae27-635de3c8c5f0" alt="">
+            </span>
+            <span>Live Casino</span>
+          </div>
+          <div class="header__tab">
+            <span class="header__tab-icon header__tab-icon--basketball">
+              <img src="https://www.figma.com/api/mcp/asset/385ae1c6-f0c3-4d14-97dc-7d3be5a006c8" alt="">
+            </span>
+            <span>Sport</span>
+          </div>
+        </nav>
+      </div>
+      <div class="header__right">
+        <div class="header__currency">
+          <div class="header__currency-inner">
+            <span class="header__currency-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="8" cy="8" r="8" fill="#1B4AEF"/>
+                <text x="8" y="11.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF">€</text>
+              </svg>
+            </span>
+            <span class="header__currency-amount">7500.00</span>
+          </div>
+          <span class="header__currency-arrow">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.5 4C2.5 3.72 2.72 3.5 3 3.5H9C9.28 3.5 9.5 3.72 9.5 4C9.5 4.1 9.47 4.19 9.42 4.27L6.42 8.77C6.22 9.08 5.78 9.08 5.58 8.77L2.58 4.27C2.53 4.19 2.5 4.1 2.5 4Z" fill="#9292AA"/>
+            </svg>
+          </span>
+        </div>
+        <button class="header__deposit-btn">
+          <span>Deposit</span>
+        </button>
+        <div class="header__wallet-btn">
+          <img src="https://www.figma.com/api/mcp/asset/6d83c7b5-75f2-4b97-8169-3c74da6cde3e" alt="Wallet">
+        </div>
+        <div class="header__chat-btn">
+          <img src="https://www.figma.com/api/mcp/asset/d33d7a43-f218-43ea-9527-e7f81a3a0402" alt="Chat">
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== MAIN ===== -->
+    <main class="main">
+
+      <!-- ===== SIDEBAR ===== -->
+      <aside class="sidebar">
+        <!-- Account -->
+        <div class="sidebar__group">
+          <div class="nav-item nav-item--bordered">
+            <span class="nav-item__icon">
+              <img src="https://www.figma.com/api/mcp/asset/419def26-c0a1-4d89-aef2-c3c050148cd0" alt="">
+            </span>
+          </div>
+        </div>
+
+        <!-- Casino Games -->
+        <div class="sidebar__group sidebar__group--isolated">
+          <div class="nav-item nav-item--bordered" style="z-index:3;">
+            <span class="nav-item__icon">
+              <img src="https://www.figma.com/api/mcp/asset/1776dc67-8232-4623-a622-e1f387095657" alt="">
+            </span>
+          </div>
+          <div class="nav-item nav-item--bordered" style="z-index:2;">
+            <span class="nav-item__icon">
+              <img src="https://www.figma.com/api/mcp/asset/c4f25bf7-c40e-47bb-a597-1d27dfd52c5a" alt="">
+            </span>
+          </div>
+          <div class="nav-item nav-item--bordered" style="z-index:1;">
+            <span class="nav-item__icon">
+              <img src="https://www.figma.com/api/mcp/asset/5059c4d5-408b-48b7-a311-8f391e7721f1" alt="">
+            </span>
+          </div>
+        </div>
+
+        <!-- Sport Exchange -->
+        <div class="sidebar__group">
+          <div class="nav-item">
+            <span class="nav-item__icon">
+              <img src="https://www.figma.com/api/mcp/asset/a0713bfc-add2-4ae9-b581-c0cbc5060864" alt="">
+            </span>
+          </div>
+        </div>
+
+        <!-- Interactive Map -->
+        <div class="sidebar__group">
+          <div class="nav-item">
+            <span class="nav-item__icon">
+              <img src="https://www.figma.com/api/mcp/asset/aee70954-54ef-4257-b409-608646deaafa" alt="">
+            </span>
+          </div>
+        </div>
+
+        <!-- Promotions -->
+        <div class="sidebar__group sidebar__group--isolated">
+          <div class="nav-item nav-item--bordered" style="z-index:6;">
+            <span class="nav-item__icon">
+              <img src="https://www.figma.com/api/mcp/asset/2fb00a1c-d042-41fe-b7ce-29f72c5d4a9f" alt="">
+            </span>
+            <span class="nav-item__badge"><span>99</span></span>
+          </div>
+          <div class="nav-item nav-item--bordered" style="z-index:5;">
+            <span class="nav-item__icon">
+              <img src="https://www.figma.com/api/mcp/asset/175d72ee-78c5-4ef0-8a04-bee22349ad0e" alt="">
+            </span>
+          </div>
+          <div class="nav-item nav-item--bordered" style="z-index:4;">
+            <span class="nav-item__icon">
+              <img src="https://www.figma.com/api/mcp/asset/ea4c15ea-75b6-4da8-a587-5601ed92cc72" alt="">
+            </span>
+            <span class="nav-item__badge"><span>99</span></span>
+          </div>
+          <div class="nav-item nav-item--bordered" style="z-index:3;">
+            <span class="nav-item__icon">
+              <img src="https://www.figma.com/api/mcp/asset/683e5c9b-0384-453f-92a0-1551c8317814" alt="">
+            </span>
+          </div>
+          <div class="nav-item nav-item--bordered" style="z-index:2;">
+            <span class="nav-item__icon">
+              <img src="https://www.figma.com/api/mcp/asset/522ef8b2-0d68-4458-a0de-efed12e342dd" alt="">
+            </span>
+          </div>
+          <div class="nav-item" style="z-index:1;">
+            <span class="nav-item__icon">
+              <img src="https://www.figma.com/api/mcp/asset/b2d201dc-2192-44cb-a91f-55880884bfff" alt="">
+            </span>
+          </div>
+        </div>
+
+        <!-- Notifications + -->
+        <div class="sidebar__group sidebar__group--isolated">
+          <div class="nav-item nav-item--bordered" style="z-index:3;">
+            <span class="nav-item__icon">
+              <img src="https://www.figma.com/api/mcp/asset/8292095e-25e8-4e3d-b72b-fd2a268ba738" alt="">
+            </span>
+            <span class="nav-item__badge"><span>99</span></span>
+          </div>
+          <div class="nav-item nav-item--bordered" style="z-index:2;">
+            <span class="nav-item__icon">
+              <img src="https://www.figma.com/api/mcp/asset/47796e38-a876-45b2-9349-e774c181949a" alt="">
+            </span>
+          </div>
+          <div class="nav-item" style="z-index:1;">
+            <span class="nav-item__icon">
+              <img src="https://www.figma.com/api/mcp/asset/11b70051-a28b-4f5b-86b9-b352f5f76d21" alt="">
+            </span>
+          </div>
+        </div>
+
+        <!-- Other -->
+        <div class="sidebar__group sidebar__group--isolated">
+          <div class="nav-item nav-item--bordered" style="z-index:4;">
+            <span class="nav-item__icon">
+              <img src="https://www.figma.com/api/mcp/asset/89d8469d-3703-4a3b-9459-9741e0743195" alt="">
+            </span>
+          </div>
+          <div class="nav-item nav-item--bordered" style="z-index:3;">
+            <span class="nav-item__icon">
+              <img src="https://www.figma.com/api/mcp/asset/1a731ffb-0093-4acf-91d6-f50c8220de7e" alt="">
+            </span>
+          </div>
+          <div class="nav-item nav-item--bordered" style="z-index:2;">
+            <span class="nav-item__icon">
+              <img src="https://www.figma.com/api/mcp/asset/6036c33d-2c52-4153-949e-c244e4b9be5b" alt="">
+            </span>
+          </div>
+          <div class="nav-item" style="z-index:1;">
+            <span class="nav-item__icon">
+              <img src="https://www.figma.com/api/mcp/asset/f7f2ce56-5e1f-4a9e-82db-958cd3c80bfa" alt="">
+            </span>
+          </div>
+        </div>
+
+        <!-- Log Out -->
+        <div class="sidebar__group">
+          <div class="nav-item">
+            <span class="nav-item__icon">
+              <img src="https://www.figma.com/api/mcp/asset/89347d8f-306d-4c2f-b89d-b871a894acea" alt="">
+            </span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ===== CONTENT ===== -->
+      <section class="content">
+        <div class="game-place">
+          <img class="game-place__bg" src="https://www.figma.com/api/mcp/asset/443f3b52-ce0c-4fbe-b8e5-4ecdd65428d9" alt="">
+          <div class="game-place__spacer-top"></div>
+          <div class="game-container">
+            <!-- Top Nav -->
+            <div class="game-nav-top">
+              <div class="game-nav__switcher">
+                <div class="game-nav__switch">
+                  <div class="game-nav__switch-track"></div>
+                  <div class="game-nav__switch-handle"></div>
+                </div>
+                <span class="game-nav__switch-label">Real Money</span>
+              </div>
+              <span class="game-nav__title">Book of Gold: Multichance</span>
+              <div class="game-nav__controls">
+                <div class="icon-btn">
+                  <span class="icon-btn__icon">
+                    <img src="https://www.figma.com/api/mcp/asset/7a8e342e-ba6b-40c5-8636-7908ff27f4d3" alt="">
+                  </span>
+                </div>
+                <div class="icon-btn">
+                  <span class="icon-btn__icon">
+                    <img src="https://www.figma.com/api/mcp/asset/8ac627d5-bd04-4a97-94d2-cfb92400fb86" alt="">
+                  </span>
+                </div>
+                <div class="icon-btn">
+                  <span class="icon-btn__icon">
+                    <img src="https://www.figma.com/api/mcp/asset/70a9c426-cdf6-4a87-ad1f-5d5da9b9f60d" alt="">
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- Game -->
+            <div class="game-iframe">
+              <img src="https://www.figma.com/api/mcp/asset/86074929-9e4e-45ae-98a4-becdb2c8dfe7" alt="Game">
+            </div>
+          </div>
+          <div class="game-place__spacer-bottom"></div>
+          <!-- Bottom Nav -->
+          <div class="game-nav-bottom">
+            <div class="game-nav-bottom__settings">
+              <div class="icon-btn">
+                <span class="icon-btn__icon">
+                  <img src="https://www.figma.com/api/mcp/asset/267d0ce1-812c-4f78-859f-8e0941fcdf4f" alt="">
+                </span>
+              </div>
+              <div class="icon-btn">
+                <span class="icon-btn__icon">
+                  <img src="https://www.figma.com/api/mcp/asset/1da448c5-9c4c-4bb5-a09c-a3fbadd2b48e" alt="">
+                </span>
+              </div>
+              <div class="icon-btn">
+                <span class="icon-btn__icon">
+                  <img src="https://www.figma.com/api/mcp/asset/8b018bb0-6090-408e-a702-c23247a57154" alt="">
+                </span>
+              </div>
+            </div>
+            <div class="game-nav-bottom__deposit">
+              <div class="game-animation-btn">
+                <span class="game-animation-btn__icon">
+                  <img src="https://www.figma.com/api/mcp/asset/4f76be66-90d7-4638-80bb-28cb9a684485" alt="">
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== RIGHT PANEL ===== -->
+      <aside class="right-panel">
+        <!-- Sidebar Content -->
+        <div class="right-sidebar">
+          <!-- Tournament Info -->
+          <div class="tournament">
+            <div class="tournament__title-row">
+              <span class="tournament__title">Weeklong Run Tournament</span>
+              <span class="tournament__info-icon">
+                <img src="https://www.figma.com/api/mcp/asset/e73c31bf-ae5e-406c-a353-b67435b2e657" alt="">
+              </span>
+            </div>
+            <span class="tournament__prize">&euro;120,566</span>
+
+            <!-- Conditions -->
+            <div class="conditions">
+              <div class="condition-row">
+                <span class="condition-row__icon">
+                  <img src="https://www.figma.com/api/mcp/asset/7e14edaa-2dbd-4e84-bfa3-6377ac054e8d" alt="">
+                </span>
+                <div class="condition-row__timer">
+                  <span class="condition-row__timer-label">Ends in:</span>
+                  <div class="condition-row__countdown">
+                    <span>09d</span>
+                    <span>14:23:01</span>
+                  </div>
+                </div>
+              </div>
+              <div class="condition-row">
+                <span class="condition-row__icon">
+                  <img src="https://www.figma.com/api/mcp/asset/7b3da821-b033-4a3d-b772-37604cdb65eb" alt="">
+                </span>
+                <span class="condition-row__text">Minimal bet: &euro;0.5</span>
+              </div>
+            </div>
+
+            <!-- Bonus Card 1 (Day multipliers) - Animated Streak -->
+            <div class="bonus-card bonus-card--animated" id="streakCard">
+              <div class="bonus-card__items">
+                <div class="bonus-track" id="streakTrack">
+                  <div class="bonus-item" data-state="inactive">
+                    <span class="bonus-item__top">2</span>
+                    <span class="bonus-item__divider-line"></span>
+                    <span class="bonus-item__bottom">+10</span>
+                  </div>
+                  <div class="bonus-item" data-state="inactive">
+                    <span class="bonus-item__top">3</span>
+                    <span class="bonus-item__divider-line"></span>
+                    <span class="bonus-item__bottom">+15</span>
+                  </div>
+                  <div class="bonus-item" data-state="inactive">
+                    <span class="bonus-item__top">4</span>
+                    <span class="bonus-item__divider-line"></span>
+                    <span class="bonus-item__bottom">+20</span>
+                  </div>
+                  <div class="bonus-item" data-state="inactive">
+                    <span class="bonus-item__top">5</span>
+                    <span class="bonus-item__divider-line"></span>
+                    <span class="bonus-item__bottom">+30</span>
+                  </div>
+                  <div class="bonus-item" data-state="inactive">
+                    <span class="bonus-item__top">6</span>
+                    <span class="bonus-item__divider-line"></span>
+                    <span class="bonus-item__bottom">+40</span>
+                  </div>
+                  <div class="bonus-item" data-state="inactive">
+                    <span class="bonus-item__top">7</span>
+                    <span class="bonus-item__divider-line"></span>
+                    <span class="bonus-item__bottom">+100</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bonus Card 2 (Win multipliers) - Animated Equalizer -->
+            <div class="bonus-card bonus-card--equalizer" id="eqCard">
+              <div class="bonus-card__items">
+                <div class="eq-track" id="eqTrack">
+                  <div class="bonus-item" data-state="inactive">
+                    <span class="bonus-item__top">x1</span>
+                    <span class="bonus-item__divider-line"></span>
+                    <span class="bonus-item__bottom">+1</span>
+                  </div>
+                  <div class="bonus-item" data-state="inactive">
+                    <span class="bonus-item__top">x3</span>
+                    <span class="bonus-item__divider-line"></span>
+                    <span class="bonus-item__bottom">+3</span>
+                  </div>
+                  <div class="bonus-item" data-state="inactive">
+                    <span class="bonus-item__top">x5</span>
+                    <span class="bonus-item__divider-line"></span>
+                    <span class="bonus-item__bottom">+7</span>
+                  </div>
+                  <div class="bonus-item" data-state="inactive">
+                    <span class="bonus-item__top">x15</span>
+                    <span class="bonus-item__divider-line"></span>
+                    <span class="bonus-item__bottom">+25</span>
+                  </div>
+                  <div class="bonus-item" data-state="inactive">
+                    <span class="bonus-item__top">x40</span>
+                    <span class="bonus-item__divider-line"></span>
+                    <span class="bonus-item__bottom">+70</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Leaderboard -->
+          <div class="leaderboard-section">
+            <div class="leaderboard__header">
+              <div class="leaderboard__title-row">
+                <span class="leaderboard__title">Leaderboard</span>
+                <div class="leaderboard__nav-btns">
+                  <div class="leaderboard__nav-btn">
+                    <span class="leaderboard__nav-btn-icon">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 4L6 8L10 12" stroke="#9292AA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="leaderboard__nav-btn">
+                    <span class="leaderboard__nav-btn-icon">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 4L10 8L6 12" stroke="#9292AA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="segmented-control">
+                <div class="segmented-control__tab segmented-control__tab--active">Main</div>
+                <div class="segmented-control__tab segmented-control__tab--inactive">Win Streak</div>
+                <div class="segmented-control__tab segmented-control__tab--inactive">Win Multiplier</div>
+              </div>
+            </div>
+
+            <!-- Leaderboard List -->
+            <div class="leaderboard__list">
+              <!-- Row 1: @hhhhhhhhh -->
+              <div class="leaderboard-row leaderboard-row--swap-target" id="topSwapAbove">
+                <span class="leaderboard-row__rank leaderboard-row__rank--active" id="topAboveRank">1</span>
+                <div class="leaderboard-row__nickname">
+                  <span class="leaderboard-row__name leaderboard-row__name--active">@hhhhhhhhh</span>
+                  <span class="leaderboard-row__activity leaderboard-row__activity--active">active 6 hours ago</span>
+                </div>
+                <div class="leaderboard-row__prize leaderboard-row__prize--active">
+                  <span class="score-value" id="flyPts1">20,152,879</span>
+                  <span class="score-value" id="flyMon1">&euro;74,052.87</span>
+                  <span class="score-stamp score-stamp--purple" id="flyStampPurple1"></span>
+                  <span class="score-stamp score-stamp--white" id="flyStampWhite1"></span>
+                </div>
+              </div>
+
+              <!-- Row 2: @aurochsloop (cyclical swap animation) -->
+              <div class="leaderboard-row leaderboard-row--swap-user" id="topSwapUser">
+                <div class="row-sweep" id="topSwapSweep"></div>
+                <span class="leaderboard-row__rank leaderboard-row__rank--active" id="topUserRank">2</span>
+                <div class="leaderboard-row__nickname">
+                  <span class="leaderboard-row__name leaderboard-row__name--active">@aurochsloop</span>
+                  <span class="leaderboard-row__activity leaderboard-row__activity--active">active 6 hours ago</span>
+                </div>
+                <div class="leaderboard-row__prize leaderboard-row__prize--active">
+                  <span class="score-value" id="topSwapPoints">12,087,662</span>
+                  <span class="score-value" id="topSwapMoney">&euro;53,854.74</span>
+                  <span class="score-stamp score-stamp--purple" id="topStampPurple"></span>
+                  <span class="score-stamp score-stamp--white" id="topStampWhite"></span>
+                </div>
+              </div>
+
+              <!-- Empty separator -->
+              <div class="leaderboard-row leaderboard-row--empty">
+                <span class="leaderboard-row__rank leaderboard-row__rank--empty">-</span>
+                <span class="leaderboard-row__empty-dash">-</span>
+                <span class="leaderboard-row__empty-dash-right">-</span>
+              </div>
+
+              <!-- Row 18: @trusta -->
+              <div class="leaderboard-row leaderboard-row--swap-target" id="swapRowAbove">
+                <span class="leaderboard-row__rank leaderboard-row__rank--active" id="swapAboveRank">18</span>
+                <div class="leaderboard-row__nickname">
+                  <span class="leaderboard-row__name leaderboard-row__name--active">@trusta</span>
+                  <span class="leaderboard-row__activity leaderboard-row__activity--active">playing Rich Wilde Tome of Mad...</span>
+                </div>
+                <div class="leaderboard-row__prize leaderboard-row__prize--active">
+                  <span class="score-value" id="flyPts18">9,493,125</span>
+                  <span class="score-value" id="flyMon18">&euro;138,207.34</span>
+                  <span class="score-stamp score-stamp--purple" id="flyStampPurple18"></span>
+                  <span class="score-stamp score-stamp--white" id="flyStampWhite18"></span>
+                </div>
+              </div>
+
+              <!-- Row 19: @kai (Your Place - highlighted, position swap animation) -->
+              <div class="leaderboard-row leaderboard-row--your-place leaderboard-row--swap-user" id="swapRowUser">
+                <div class="row-sweep" id="swapSweep"></div>
+                <span class="leaderboard-row__rank leaderboard-row__rank--highlight" id="swapUserRank">19</span>
+                <div class="leaderboard-row__nickname leaderboard-row__nickname--inline">
+                  <span class="leaderboard-row__name leaderboard-row__name--highlight">@kai</span>
+                  <span class="leaderboard-row__flash-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.939 7.14668H9.87903V2.34668C9.87903 1.22668 9.27236 1.00001 8.53236 1.84001L7.99903 2.44668L3.4857 7.58001C2.8657 8.28001 3.1257 8.85335 4.05903 8.85335H6.11903V13.6533C6.11903 14.7733 6.7257 15 7.4657 14.16L7.99903 13.5533L12.5124 8.42001C13.1324 7.72001 12.8724 7.14668 11.939 7.14668Z" fill="#A888F7"/>
+                    </svg>
+                  </span>
+                </div>
+                <div class="leaderboard-row__prize leaderboard-row__prize--highlight">
+                  <span class="score-value" id="swapPoints">159</span>
+                  <span class="score-value" id="swapMoney">&euro;217.87</span>
+                  <span class="score-stamp score-stamp--purple" id="swapStampPurple"></span>
+                  <span class="score-stamp score-stamp--white" id="swapStampWhite"></span>
+                </div>
+              </div>
+
+              <!-- Row 20: @hidden -->
+              <div class="leaderboard-row" id="scoringRow5">
+                <span class="leaderboard-row__rank leaderboard-row__rank--active">20</span>
+                <div class="leaderboard-row__nickname">
+                  <span class="leaderboard-row__name leaderboard-row__name--active">@hidden</span>
+                  <span class="leaderboard-row__activity leaderboard-row__activity--active">active 6 hours ago</span>
+                </div>
+                <div class="leaderboard-row__prize leaderboard-row__prize--active">
+                  <span class="score-value" id="flyPts20">1,830,501</span>
+                  <span class="score-value" id="flyMon20">&euro;18,700.75</span>
+                  <span class="score-stamp score-stamp--purple" id="flyStampPurple20"></span>
+                  <span class="score-stamp score-stamp--white" id="flyStampWhite20"></span>
+                </div>
+              </div>
+
+              <!-- Empty separator -->
+              <div class="leaderboard-row leaderboard-row--empty">
+                <span class="leaderboard-row__rank leaderboard-row__rank--empty">-</span>
+                <span class="leaderboard-row__empty-dash">-</span>
+                <span class="leaderboard-row__empty-dash-right">-</span>
+              </div>
+
+              <!-- Row 150: @texnologes (animated scoring v2) -->
+              <div class="leaderboard-row leaderboard-row--scoring-v2" id="scoringRow2">
+                <div class="row-sweep" id="rowSweep"></div>
+                <span class="leaderboard-row__rank leaderboard-row__rank--active">150</span>
+                <div class="leaderboard-row__nickname">
+                  <span class="leaderboard-row__name leaderboard-row__name--active">@texnologes</span>
+                  <span class="leaderboard-row__activity leaderboard-row__activity--active">playing Rich Wilde Tome of Mad...</span>
+                </div>
+                <div class="leaderboard-row__prize leaderboard-row__prize--active">
+                  <span class="score-value" id="scorePoints2">2</span>
+                  <span class="score-value" id="scoreMoney2">&euro;18.16</span>
+                  <span class="score-stamp score-stamp--regular" id="stampRegular"></span>
+                  <span class="score-stamp score-stamp--booster" id="stampBooster"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar Icons -->
+          <div class="sidebar-icons">
+            <div class="sidebar-icons__group">
+              <div class="game-animation-btn">
+                <span class="game-animation-btn__icon">
+                  <img src="https://www.figma.com/api/mcp/asset/1ea9eda1-6938-434a-a66e-aa01defd21d5" alt="">
+                </span>
+              </div>
+              <div class="game-animation-btn">
+                <span class="game-animation-btn__icon">
+                  <img src="https://www.figma.com/api/mcp/asset/220ad1a7-92e8-4dae-b2f8-e14676d199cf" alt="">
+                </span>
+              </div>
+              <div class="game-animation-btn">
+                <span class="game-animation-btn__icon">
+                  <img src="https://www.figma.com/api/mcp/asset/a043e574-d324-4e1c-8327-e461aa59d0ed" alt="">
+                </span>
+              </div>
+              <div class="game-animation-btn">
+                <span class="game-animation-btn__icon">
+                  <img src="https://www.figma.com/api/mcp/asset/0a0b0317-9384-4f73-ad1e-6d63da4fc861" alt="">
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+    </main>
+  </div>
+  <script>
+    (function () {
+      const track = document.getElementById('streakTrack');
+      if (!track) return;
+
+      const items = Array.from(track.querySelectorAll('.bonus-item'));
+      const GAP = 4;
+      let slideDistance = 0;
+
+      function calcSlide() {
+        slideDistance = items[0].offsetWidth + GAP;
+      }
+
+      function wait(ms) {
+        return new Promise(r => setTimeout(r, ms));
+      }
+
+      function setState(idx, state) {
+        if (items[idx]) items[idx].setAttribute('data-state', state);
+      }
+
+      function setAllInactive() {
+        items.forEach((_, i) => setState(i, 'inactive'));
+      }
+
+      function slideTrack(offset, animate) {
+        if (animate) {
+          track.classList.add('bonus-track--sliding');
+        } else {
+          track.classList.remove('bonus-track--sliding');
+        }
+        track.style.transform = `translateX(${offset}px)`;
+      }
+
+      function onTransitionEnd() {
+        return new Promise(r => {
+          function handler(e) {
+            if (e.target === track) {
+              track.removeEventListener('transitionend', handler);
+              r();
+            }
+          }
+          track.addEventListener('transitionend', handler);
+        });
+      }
+
+      async function runCycle() {
+        calcSlide();
+
+        // --- PHASE 1: Build-up from all inactive ---
+        setAllInactive();
+        slideTrack(0, false);
+        await wait(600);
+
+        setState(0, 'completed');
+        await wait(400);
+        setState(1, 'completed');
+        await wait(400);
+        setState(2, 'active');
+        await wait(400);
+
+        // --- PHASE 2: Hold (initial state) ---
+        await wait(1800);
+
+        // --- PHASE 3: Slide left (item 2 exits, item 7 enters) ---
+        slideTrack(-slideDistance, true);
+        await onTransitionEnd();
+
+        // --- PHASE 4: Hold after slide ---
+        await wait(700);
+
+        // --- PHASE 5: Highlight advances (4→completed, 5→active) ---
+        setState(2, 'completed');
+        setState(3, 'active');
+        await wait(300);
+
+        // --- PHASE 6: Hold ---
+        await wait(1200);
+
+        // --- PHASE 7: Reset – slide right + all deactivate ---
+        setAllInactive();
+        slideTrack(0, true);
+        await onTransitionEnd();
+
+        // --- PHASE 8: Hold all inactive ---
+        await wait(2800);
+      }
+
+      async function loop() {
+        while (true) {
+          await runCycle();
+        }
+      }
+
+      requestAnimationFrame(() => {
+        calcSlide();
+        loop();
+      });
+    })();
+
+    /* ===== Equalizer Animation (Win Multipliers) ===== */
+    (function () {
+      const track = document.getElementById('eqTrack');
+      if (!track) return;
+
+      const items = Array.from(track.querySelectorAll('.bonus-item'));
+      const SWEEP_FAST = 100;
+      const HOLD_PEAK = 1400;
+      const FADE_OUT = 300;
+      const PAUSE_BETWEEN = 800;
+
+      function wait(ms) {
+        return new Promise(r => setTimeout(r, ms));
+      }
+
+      function setState(idx, state) {
+        if (items[idx]) items[idx].setAttribute('data-state', state);
+      }
+
+      function setAllInactive() {
+        items.forEach((_, i) => setState(i, 'inactive'));
+      }
+
+      async function sweepTo(targetIdx) {
+        setAllInactive();
+        await wait(PAUSE_BETWEEN);
+
+        for (let i = 0; i <= targetIdx; i++) {
+          if (i > 0) {
+            setState(i - 1, 'swept');
+          }
+          setState(i, 'active');
+
+          if (i < targetIdx) {
+            await wait(SWEEP_FAST);
+          }
+        }
+
+        await wait(HOLD_PEAK);
+
+        items.forEach((item) => {
+          if (item.getAttribute('data-state') !== 'inactive') {
+            item.style.transition = 'height 350ms ease-out, background-color 400ms ease-out, border-color 400ms ease-out, box-shadow 400ms ease-out';
+          }
+        });
+        setAllInactive();
+        await wait(FADE_OUT + 250);
+
+        items.forEach((item) => {
+          item.style.transition = '';
+        });
+      }
+
+      const rounds = [1, 3, 4, 2, 0, 4, 1, 3, 2, 4];
+
+      async function loop() {
+        while (true) {
+          for (const target of rounds) {
+            await sweepTo(target);
+          }
+        }
+      }
+
+      requestAnimationFrame(() => loop());
+    })();
+
+
+    /* ===== Leaderboard Score Animation V2 (Sweep + Stamp) ===== */
+    (function () {
+      const row = document.getElementById('scoringRow2');
+      const sweep = document.getElementById('rowSweep');
+      const scorePoints = document.getElementById('scorePoints2');
+      const scoreMoney = document.getElementById('scoreMoney2');
+      const stampReg = document.getElementById('stampRegular');
+      const stampBoost = document.getElementById('stampBooster');
+      if (!row || !sweep || !scorePoints || !stampReg || !stampBoost) return;
+
+      let pts = 2;
+      let money = 18.16;
+
+      function wait(ms) {
+        return new Promise(r => setTimeout(r, ms));
+      }
+
+      function runSweep(gold) {
+        return new Promise(resolve => {
+          sweep.className = 'row-sweep';
+          void sweep.offsetWidth;
+          sweep.classList.add(gold ? 'sweeping--gold' : 'sweeping');
+          sweep.addEventListener('animationend', function h() {
+            sweep.removeEventListener('animationend', h);
+            sweep.className = 'row-sweep';
+            resolve();
+          });
+        });
+      }
+
+      function runStamp(el, text) {
+        return new Promise(resolve => {
+          el.textContent = text;
+          el.classList.remove('stamping');
+          void el.offsetWidth;
+          el.classList.add('stamping');
+          el.addEventListener('animationend', function h() {
+            el.removeEventListener('animationend', h);
+            el.classList.remove('stamping');
+            resolve();
+          });
+        });
+      }
+
+      function glowRow(gold) {
+        row.classList.remove('glowing', 'glowing--gold');
+        void row.offsetWidth;
+        row.classList.add(gold ? 'glowing--gold' : 'glowing');
+      }
+
+      function countUp(el, from, to, dur, fmt) {
+        const t0 = performance.now();
+        function tick(now) {
+          const p = Math.min((now - t0) / dur, 1);
+          const e = 1 - Math.pow(1 - p, 3);
+          el.textContent = fmt(from + (to - from) * e);
+          if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      }
+
+      const scenarios = [
+        { regular: 88,  booster: 144, moneyAdd: 6.30 },
+        { regular: 210, booster: 315, moneyAdd: 11.80 },
+        { regular: 55,  booster: 90,  moneyAdd: 3.90 },
+        { regular: 430, booster: 680, moneyAdd: 22.50 },
+      ];
+      let idx = 0;
+
+      async function runScoring() {
+        const s = scenarios[idx % scenarios.length];
+        idx++;
+
+        const newPts = pts + s.regular;
+        await runStamp(stampReg, '+' + s.regular);
+        countUp(scorePoints, pts, newPts, 350, v => Math.round(v).toLocaleString());
+        pts = newPts;
+        await wait(400);
+
+        const newPts2 = pts + s.booster;
+        const newMoney = money + s.moneyAdd;
+        await runStamp(stampBoost, '+' + s.booster);
+        countUp(scorePoints, pts, newPts2, 350, v => Math.round(v).toLocaleString());
+        countUp(scoreMoney, money, newMoney, 350, v => '€' + v.toFixed(2));
+        pts = newPts2;
+        money = newMoney;
+
+        await wait(3500);
+      }
+
+      async function loop() {
+        await wait(4000);
+        while (true) {
+          await runScoring();
+        }
+      }
+
+      requestAnimationFrame(() => loop());
+    })();
+
+    /* ===== Cyclical Position Swap Animation (@aurochsloop 2⇄1) ===== */
+    (function () {
+      const userRow = document.getElementById('topSwapUser');
+      const aboveRow = document.getElementById('topSwapAbove');
+      const userRank = document.getElementById('topUserRank');
+      const aboveRank = document.getElementById('topAboveRank');
+      const sweep = document.getElementById('topSwapSweep');
+      const points = document.getElementById('topSwapPoints');
+      const money = document.getElementById('topSwapMoney');
+      const stampPurple = document.getElementById('topStampPurple');
+      const stampWhite = document.getElementById('topStampWhite');
+      if (!userRow || !aboveRow || !stampPurple || !stampWhite) return;
+
+      let pts = 12087662;
+      let mon = 53854.74;
+
+      function wait(ms) {
+        return new Promise(r => setTimeout(r, ms));
+      }
+
+      function runStamp(el, text) {
+        return new Promise(resolve => {
+          el.textContent = text;
+          el.classList.remove('stamping');
+          void el.offsetWidth;
+          el.classList.add('stamping');
+          el.addEventListener('animationend', function h() {
+            el.removeEventListener('animationend', h);
+            el.classList.remove('stamping');
+            resolve();
+          });
+        });
+      }
+
+      function countUp(el, from, to, dur, fmt) {
+        const t0 = performance.now();
+        function tick(now) {
+          const p = Math.min((now - t0) / dur, 1);
+          const e = 1 - Math.pow(1 - p, 3);
+          el.textContent = fmt(from + (to - from) * e);
+          if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      }
+
+      function pulseValue(el) {
+        el.classList.remove('pulsing');
+        void el.offsetWidth;
+        el.classList.add('pulsing');
+        el.addEventListener('animationend', function h() {
+          el.removeEventListener('animationend', h);
+          el.classList.remove('pulsing');
+        });
+      }
+
+      function moveUp() {
+        return new Promise(resolve => {
+          const userH = userRow.offsetHeight + 1;
+          const aboveH = aboveRow.offsetHeight + 1;
+          userRow.style.transform = 'translateY(-' + aboveH + 'px)';
+          aboveRow.style.transform = 'translateY(' + userH + 'px)';
+          function onEnd() {
+            userRow.removeEventListener('transitionend', onEnd);
+            userRow.style.transition = 'none';
+            aboveRow.style.transition = 'none';
+            userRow.style.transform = '';
+            aboveRow.style.transform = '';
+            aboveRow.parentNode.insertBefore(userRow, aboveRow);
+            void userRow.offsetWidth;
+            userRow.style.transition = '';
+            aboveRow.style.transition = '';
+            userRank.textContent = '1';
+            aboveRank.textContent = '2';
+            resolve();
+          }
+          userRow.addEventListener('transitionend', onEnd);
+        });
+      }
+
+      function moveDown() {
+        return new Promise(resolve => {
+          const userH = userRow.offsetHeight + 1;
+          const aboveH = aboveRow.offsetHeight + 1;
+          userRow.style.transform = 'translateY(' + aboveH + 'px)';
+          aboveRow.style.transform = 'translateY(-' + userH + 'px)';
+          function onEnd() {
+            userRow.removeEventListener('transitionend', onEnd);
+            userRow.style.transition = 'none';
+            aboveRow.style.transition = 'none';
+            userRow.style.transform = '';
+            aboveRow.style.transform = '';
+            userRow.parentNode.insertBefore(aboveRow, userRow);
+            void userRow.offsetWidth;
+            userRow.style.transition = '';
+            aboveRow.style.transition = '';
+            userRank.textContent = '2';
+            aboveRank.textContent = '1';
+            resolve();
+          }
+          userRow.addEventListener('transitionend', onEnd);
+        });
+      }
+
+      function runSweep() {
+        sweep.className = 'row-sweep';
+        void sweep.offsetWidth;
+        sweep.classList.add('sweeping');
+        sweep.addEventListener('animationend', function h() {
+          sweep.removeEventListener('animationend', h);
+          sweep.className = 'row-sweep';
+        });
+      }
+
+      function highlightRow() {
+        userRow.classList.remove('swap-highlight');
+        void userRow.offsetWidth;
+        userRow.classList.add('swap-highlight');
+      }
+
+      async function showAmounts(s) {
+        const newPts = pts + s.regular;
+        await runStamp(stampPurple, '+' + s.regular.toLocaleString());
+        pulseValue(points);
+        countUp(points, pts, newPts, 350, v => Math.round(v).toLocaleString());
+        pts = newPts;
+        await wait(300);
+
+        const newPts2 = pts + s.booster;
+        const newMon = mon + s.moneyAdd;
+        await runStamp(stampWhite, '+' + s.booster.toLocaleString());
+        pulseValue(points);
+        pulseValue(money);
+        countUp(points, pts, newPts2, 350, v => Math.round(v).toLocaleString());
+        countUp(money, mon, newMon, 350, v => '€' + v.toFixed(2));
+        pts = newPts2;
+        mon = newMon;
+      }
+
+      const amounts = [
+        { regular: 45000, booster: 67500, moneyAdd: 1850.30 },
+        { regular: 32000, booster: 48000, moneyAdd: 1240.60 },
+        { regular: 58000, booster: 87000, moneyAdd: 2410.80 },
+        { regular: 21000, booster: 31500, moneyAdd: 890.50 },
+        { regular: 73000, booster: 109500, moneyAdd: 3100.20 },
+      ];
+      let idx = 0;
+
+      function next() {
+        return amounts[idx++ % amounts.length];
+      }
+
+      async function loop() {
+        await wait(3000);
+
+        while (true) {
+          await showAmounts(next());
+          await wait(500);
+          await moveUp();
+          await wait(100);
+          highlightRow();
+          runSweep();
+          await wait(2000);
+
+          await showAmounts(next());
+          await wait(1500);
+          await showAmounts(next());
+          await wait(2000);
+
+          await showAmounts(next());
+          await wait(500);
+          await moveDown();
+          await wait(100);
+          highlightRow();
+          runSweep();
+          await wait(3500);
+        }
+      }
+
+      requestAnimationFrame(() => loop());
+    })();
+
+    /* ===== Cyclical Position Swap Animation (@kai 19⇄18) ===== */
+    (function () {
+      const userRow = document.getElementById('swapRowUser');
+      const aboveRow = document.getElementById('swapRowAbove');
+      const userRank = document.getElementById('swapUserRank');
+      const aboveRank = document.getElementById('swapAboveRank');
+      const sweep = document.getElementById('swapSweep');
+      const points = document.getElementById('swapPoints');
+      const money = document.getElementById('swapMoney');
+      const stampPurple = document.getElementById('swapStampPurple');
+      const stampWhite = document.getElementById('swapStampWhite');
+      if (!userRow || !aboveRow || !stampPurple || !stampWhite) return;
+
+      let pts = 159;
+      let mon = 217.87;
+      let isAbove = false;
+
+      function wait(ms) {
+        return new Promise(r => setTimeout(r, ms));
+      }
+
+      function runStamp(el, text) {
+        return new Promise(resolve => {
+          el.textContent = text;
+          el.classList.remove('stamping');
+          void el.offsetWidth;
+          el.classList.add('stamping');
+          el.addEventListener('animationend', function h() {
+            el.removeEventListener('animationend', h);
+            el.classList.remove('stamping');
+            resolve();
+          });
+        });
+      }
+
+      function countUp(el, from, to, dur, fmt) {
+        const t0 = performance.now();
+        function tick(now) {
+          const p = Math.min((now - t0) / dur, 1);
+          const e = 1 - Math.pow(1 - p, 3);
+          el.textContent = fmt(from + (to - from) * e);
+          if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      }
+
+      function pulseValue(el) {
+        el.classList.remove('pulsing');
+        void el.offsetWidth;
+        el.classList.add('pulsing');
+        el.addEventListener('animationend', function h() {
+          el.removeEventListener('animationend', h);
+          el.classList.remove('pulsing');
+        });
+      }
+
+      function moveUp() {
+        return new Promise(resolve => {
+          const userH = userRow.offsetHeight + 1;
+          const aboveH = aboveRow.offsetHeight + 1;
+          userRow.style.transform = 'translateY(-' + aboveH + 'px)';
+          aboveRow.style.transform = 'translateY(' + userH + 'px)';
+
+          function onEnd() {
+            userRow.removeEventListener('transitionend', onEnd);
+            userRow.style.transition = 'none';
+            aboveRow.style.transition = 'none';
+            userRow.style.transform = '';
+            aboveRow.style.transform = '';
+            aboveRow.parentNode.insertBefore(userRow, aboveRow);
+            void userRow.offsetWidth;
+            userRow.style.transition = '';
+            aboveRow.style.transition = '';
+            userRank.textContent = '18';
+            aboveRank.textContent = '19';
+            isAbove = true;
+            resolve();
+          }
+          userRow.addEventListener('transitionend', onEnd);
+        });
+      }
+
+      function moveDown() {
+        return new Promise(resolve => {
+          const userH = userRow.offsetHeight + 1;
+          const aboveH = aboveRow.offsetHeight + 1;
+          userRow.style.transform = 'translateY(' + aboveH + 'px)';
+          aboveRow.style.transform = 'translateY(-' + userH + 'px)';
+
+          function onEnd() {
+            userRow.removeEventListener('transitionend', onEnd);
+            userRow.style.transition = 'none';
+            aboveRow.style.transition = 'none';
+            userRow.style.transform = '';
+            aboveRow.style.transform = '';
+            userRow.parentNode.insertBefore(aboveRow, userRow);
+            void userRow.offsetWidth;
+            userRow.style.transition = '';
+            aboveRow.style.transition = '';
+            userRank.textContent = '19';
+            aboveRank.textContent = '18';
+            isAbove = false;
+            resolve();
+          }
+          userRow.addEventListener('transitionend', onEnd);
+        });
+      }
+
+      function runSweep() {
+        sweep.className = 'row-sweep';
+        void sweep.offsetWidth;
+        sweep.classList.add('sweeping');
+        sweep.addEventListener('animationend', function h() {
+          sweep.removeEventListener('animationend', h);
+          sweep.className = 'row-sweep';
+        });
+      }
+
+      function highlightRow() {
+        userRow.classList.remove('swap-highlight');
+        void userRow.offsetWidth;
+        userRow.classList.add('swap-highlight');
+      }
+
+      async function showAmounts(s) {
+        const newPts = pts + s.regular;
+        await runStamp(stampPurple, '+' + s.regular.toLocaleString());
+        pulseValue(points);
+        countUp(points, pts, newPts, 350, v => Math.round(v).toLocaleString());
+        pts = newPts;
+        await wait(300);
+
+        const newPts2 = pts + s.booster;
+        const newMon = mon + s.moneyAdd;
+        await runStamp(stampWhite, '+' + s.booster.toLocaleString());
+        pulseValue(points);
+        pulseValue(money);
+        countUp(points, pts, newPts2, 350, v => Math.round(v).toLocaleString());
+        countUp(money, mon, newMon, 350, v => '€' + v.toFixed(2));
+        pts = newPts2;
+        mon = newMon;
+      }
+
+      const amounts = [
+        { regular: 2500, booster: 3800, moneyAdd: 92.10 },
+        { regular: 1800, booster: 2700, moneyAdd: 65.40 },
+        { regular: 3200, booster: 4800, moneyAdd: 110.50 },
+        { regular: 1400, booster: 2100, moneyAdd: 48.30 },
+        { regular: 900,  booster: 1350, moneyAdd: 28.70 },
+        { regular: 2100, booster: 3150, moneyAdd: 78.90 },
+      ];
+      let idx = 0;
+
+      function next() {
+        return amounts[idx++ % amounts.length];
+      }
+
+      async function loop() {
+        await wait(5000);
+
+        while (true) {
+          /* ---- Phase 1: fly amounts + move UP 19→18 ---- */
+          await showAmounts(next());
+          await wait(500);
+          await moveUp();
+          await wait(100);
+          highlightRow();
+          runSweep();
+          await wait(2500);
+
+          /* ---- Phase 2: extra flying amounts at 18th (no movement, no highlight) ---- */
+          await showAmounts(next());
+          await wait(1800);
+          await showAmounts(next());
+          await wait(1800);
+
+          /* ---- Phase 3: fly amounts + move DOWN 18→19 ---- */
+          await showAmounts(next());
+          await wait(500);
+          await moveDown();
+          await wait(100);
+          highlightRow();
+          runSweep();
+          await wait(3000);
+        }
+      }
+
+      requestAnimationFrame(() => loop());
+    })();
+
+    /* ===== Standalone Flying Amounts Factory ===== */
+    function createFlyLoop(cfg) {
+      const pts  = document.getElementById(cfg.ptsId);
+      const mon  = document.getElementById(cfg.monId);
+      const stP  = document.getElementById(cfg.stampPurpleId);
+      const stW  = document.getElementById(cfg.stampWhiteId);
+      if (!pts || !mon || !stP || !stW) return;
+
+      let p = cfg.startPts;
+      let m = cfg.startMon;
+
+      function wait(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+      function runStamp(el, text) {
+        return new Promise(resolve => {
+          el.textContent = text;
+          el.classList.remove('stamping');
+          void el.offsetWidth;
+          el.classList.add('stamping');
+          el.addEventListener('animationend', function h() {
+            el.removeEventListener('animationend', h);
+            el.classList.remove('stamping');
+            resolve();
+          });
+        });
+      }
+
+      function countUp(el, from, to, dur, fmt) {
+        const t0 = performance.now();
+        function tick(now) {
+          const pr = Math.min((now - t0) / dur, 1);
+          const e = 1 - Math.pow(1 - pr, 3);
+          el.textContent = fmt(from + (to - from) * e);
+          if (pr < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      }
+
+      function pulseValue(el) {
+        el.classList.remove('pulsing');
+        void el.offsetWidth;
+        el.classList.add('pulsing');
+        el.addEventListener('animationend', function h() {
+          el.removeEventListener('animationend', h);
+          el.classList.remove('pulsing');
+        });
+      }
+
+      let idx = 0;
+      function next() { return cfg.amounts[idx++ % cfg.amounts.length]; }
+
+      async function showAmounts() {
+        const s = next();
+        const newP = p + s.regular;
+        await runStamp(stP, '+' + s.regular.toLocaleString());
+        pulseValue(pts);
+        countUp(pts, p, newP, 350, v => Math.round(v).toLocaleString());
+        p = newP;
+        await wait(300);
+
+        const newP2 = p + s.booster;
+        const newM = m + s.moneyAdd;
+        await runStamp(stW, '+' + s.booster.toLocaleString());
+        pulseValue(pts);
+        pulseValue(mon);
+        countUp(pts, p, newP2, 350, v => Math.round(v).toLocaleString());
+        countUp(mon, m, newM, 350, v => '€' + v.toFixed(2));
+        p = newP2;
+        m = newM;
+      }
+
+      async function loop() {
+        await wait(cfg.delay);
+        while (true) {
+          await showAmounts();
+          await wait(cfg.interval);
+        }
+      }
+
+      requestAnimationFrame(() => loop());
+    }
+
+    /* Row 1: @hhhhhhhhh */
+    createFlyLoop({
+      ptsId: 'flyPts1', monId: 'flyMon1',
+      stampPurpleId: 'flyStampPurple1', stampWhiteId: 'flyStampWhite1',
+      startPts: 20152879, startMon: 74052.87,
+      delay: 4000, interval: 3200,
+      amounts: [
+        { regular: 85000,  booster: 127500, moneyAdd: 3420.50 },
+        { regular: 62000,  booster: 93000,  moneyAdd: 2580.30 },
+        { regular: 110000, booster: 165000, moneyAdd: 4750.80 },
+        { regular: 48000,  booster: 72000,  moneyAdd: 1890.60 },
+      ]
+    });
+
+    /* Row 18: @trusta */
+    createFlyLoop({
+      ptsId: 'flyPts18', monId: 'flyMon18',
+      stampPurpleId: 'flyStampPurple18', stampWhiteId: 'flyStampWhite18',
+      startPts: 9493125, startMon: 138207.34,
+      delay: 6500, interval: 3800,
+      amounts: [
+        { regular: 3800,  booster: 5700,  moneyAdd: 145.20 },
+        { regular: 2200,  booster: 3300,  moneyAdd: 88.40 },
+        { regular: 5100,  booster: 7650,  moneyAdd: 210.60 },
+        { regular: 1600,  booster: 2400,  moneyAdd: 62.30 },
+      ]
+    });
+
+    /* Row 20: @hidden */
+    createFlyLoop({
+      ptsId: 'flyPts20', monId: 'flyMon20',
+      stampPurpleId: 'flyStampPurple20', stampWhiteId: 'flyStampWhite20',
+      startPts: 1830501, startMon: 18700.75,
+      delay: 7800, interval: 4200,
+      amounts: [
+        { regular: 420,  booster: 630,  moneyAdd: 12.80 },
+        { regular: 280,  booster: 420,  moneyAdd: 8.50 },
+        { regular: 650,  booster: 975,  moneyAdd: 19.40 },
+        { regular: 180,  booster: 270,  moneyAdd: 5.60 },
+      ]
+    });
+
+  </script>
+</body>
+</html>
