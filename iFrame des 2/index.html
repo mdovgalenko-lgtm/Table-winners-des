@@ -540,29 +540,30 @@
             </div>
           </div>
 
-          <!-- Sidebar Icons -->
-          <div class="sidebar-icons">
-            <div class="sidebar-icons__group">
-              <div class="game-animation-btn">
-                <span class="game-animation-btn__icon">
-                  <img src="https://www.figma.com/api/mcp/asset/1ea9eda1-6938-434a-a66e-aa01defd21d5" alt="">
-                </span>
-              </div>
-              <div class="game-animation-btn">
-                <span class="game-animation-btn__icon">
-                  <img src="https://www.figma.com/api/mcp/asset/220ad1a7-92e8-4dae-b2f8-e14676d199cf" alt="">
-                </span>
-              </div>
-              <div class="game-animation-btn">
-                <span class="game-animation-btn__icon">
-                  <img src="https://www.figma.com/api/mcp/asset/a043e574-d324-4e1c-8327-e461aa59d0ed" alt="">
-                </span>
-              </div>
-              <div class="game-animation-btn">
-                <span class="game-animation-btn__icon">
-                  <img src="https://www.figma.com/api/mcp/asset/0a0b0317-9384-4f73-ad1e-6d63da4fc861" alt="">
-                </span>
-              </div>
+        </div>
+
+        <!-- Sidebar Icons (fixed bottom) -->
+        <div class="sidebar-icons">
+          <div class="sidebar-icons__group">
+            <div class="game-animation-btn">
+              <span class="game-animation-btn__icon">
+                <img src="https://www.figma.com/api/mcp/asset/1ea9eda1-6938-434a-a66e-aa01defd21d5" alt="">
+              </span>
+            </div>
+            <div class="game-animation-btn">
+              <span class="game-animation-btn__icon">
+                <img src="https://www.figma.com/api/mcp/asset/220ad1a7-92e8-4dae-b2f8-e14676d199cf" alt="">
+              </span>
+            </div>
+            <div class="game-animation-btn">
+              <span class="game-animation-btn__icon">
+                <img src="https://www.figma.com/api/mcp/asset/a043e574-d324-4e1c-8327-e461aa59d0ed" alt="">
+              </span>
+            </div>
+            <div class="game-animation-btn">
+              <span class="game-animation-btn__icon">
+                <img src="https://www.figma.com/api/mcp/asset/0a0b0317-9384-4f73-ad1e-6d63da4fc861" alt="">
+              </span>
             </div>
           </div>
         </div>
@@ -812,15 +813,15 @@
 
         const newPts = pts + s.regular;
         await runStamp(stampReg, '+' + s.regular);
-        countUp(scorePoints, pts, newPts, 350, v => Math.round(v).toLocaleString());
+        countUp(scorePoints, pts, newPts, 600, v => Math.round(v).toLocaleString());
         pts = newPts;
         await wait(400);
 
         const newPts2 = pts + s.booster;
         const newMoney = money + s.moneyAdd;
         await runStamp(stampBoost, '+' + s.booster);
-        countUp(scorePoints, pts, newPts2, 350, v => Math.round(v).toLocaleString());
-        countUp(scoreMoney, money, newMoney, 350, v => '€' + v.toFixed(2));
+        countUp(scorePoints, pts, newPts2, 600, v => Math.round(v).toLocaleString());
+        countUp(scoreMoney, money, newMoney, 600, v => '€' + v.toFixed(2));
         pts = newPts2;
         money = newMoney;
 
@@ -960,7 +961,7 @@
         const newPts = pts + s.regular;
         await runStamp(stampPurple, '+' + s.regular.toLocaleString());
         pulseValue(points);
-        countUp(points, pts, newPts, 350, v => Math.round(v).toLocaleString());
+        countUp(points, pts, newPts, 600, v => Math.round(v).toLocaleString());
         pts = newPts;
         await wait(300);
 
@@ -969,8 +970,8 @@
         await runStamp(stampWhite, '+' + s.booster.toLocaleString());
         pulseValue(points);
         pulseValue(money);
-        countUp(points, pts, newPts2, 350, v => Math.round(v).toLocaleString());
-        countUp(money, mon, newMon, 350, v => '€' + v.toFixed(2));
+        countUp(points, pts, newPts2, 600, v => Math.round(v).toLocaleString());
+        countUp(money, mon, newMon, 600, v => '€' + v.toFixed(2));
         pts = newPts2;
         mon = newMon;
       }
@@ -1146,7 +1147,7 @@
         const newPts = pts + s.regular;
         await runStamp(stampPurple, '+' + s.regular.toLocaleString());
         pulseValue(points);
-        countUp(points, pts, newPts, 350, v => Math.round(v).toLocaleString());
+        countUp(points, pts, newPts, 600, v => Math.round(v).toLocaleString());
         pts = newPts;
         await wait(300);
 
@@ -1155,8 +1156,8 @@
         await runStamp(stampWhite, '+' + s.booster.toLocaleString());
         pulseValue(points);
         pulseValue(money);
-        countUp(points, pts, newPts2, 350, v => Math.round(v).toLocaleString());
-        countUp(money, mon, newMon, 350, v => '€' + v.toFixed(2));
+        countUp(points, pts, newPts2, 600, v => Math.round(v).toLocaleString());
+        countUp(money, mon, newMon, 600, v => '€' + v.toFixed(2));
         pts = newPts2;
         mon = newMon;
       }
@@ -1264,7 +1265,7 @@
         const newP = p + s.regular;
         await runStamp(stP, '+' + s.regular.toLocaleString());
         pulseValue(pts);
-        countUp(pts, p, newP, 350, v => Math.round(v).toLocaleString());
+        countUp(pts, p, newP, 600, v => Math.round(v).toLocaleString());
         p = newP;
         await wait(300);
 
@@ -1273,8 +1274,8 @@
         await runStamp(stW, '+' + s.booster.toLocaleString());
         pulseValue(pts);
         pulseValue(mon);
-        countUp(pts, p, newP2, 350, v => Math.round(v).toLocaleString());
-        countUp(mon, m, newM, 350, v => '€' + v.toFixed(2));
+        countUp(pts, p, newP2, 600, v => Math.round(v).toLocaleString());
+        countUp(mon, m, newM, 600, v => '€' + v.toFixed(2));
         p = newP2;
         m = newM;
       }
