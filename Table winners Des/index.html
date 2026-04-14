@@ -61,7 +61,7 @@
             <span class="cell-text cell-text--bold">x0.30</span>
           </div>
           <div class="cell cell--win cell--right">
-            <span class="cell-text cell-text--bold cell-text--green">1.50</span>
+            <span class="cell-text cell-text--bold">1.50</span>
             <span class="currency-circle currency-circle--usd">$</span>
           </div>
         </div>
@@ -89,7 +89,7 @@
             <span class="cell-text cell-text--bold">x0.00</span>
           </div>
           <div class="cell cell--win cell--right">
-            <span class="cell-text cell-text--bold cell-text--green">200.00</span>
+            <span class="cell-text cell-text--bold">200.00</span>
             <span class="currency-circle currency-circle--usd">$</span>
           </div>
         </div>
@@ -145,7 +145,7 @@
             <span class="cell-text cell-text--bold">x0.00</span>
           </div>
           <div class="cell cell--win cell--right">
-            <span class="cell-text cell-text--bold cell-text--green">5,000,000.00</span>
+            <span class="cell-text cell-text--bold">5,000,000.00</span>
             <span class="currency-circle currency-circle--jpy">¥</span>
           </div>
         </div>
@@ -201,7 +201,7 @@
             <span class="cell-text cell-text--bold">x0.00</span>
           </div>
           <div class="cell cell--win cell--right">
-            <span class="cell-text cell-text--bold cell-text--green">15.00</span>
+            <span class="cell-text cell-text--bold">15.00</span>
             <span class="currency-circle currency-circle--usd">$</span>
           </div>
         </div>
@@ -257,7 +257,7 @@
             <span class="cell-text cell-text--bold">x2</span>
           </div>
           <div class="cell cell--win cell--right">
-            <span class="cell-text cell-text--bold cell-text--green">1.00</span>
+            <span class="cell-text cell-text--bold">1.00</span>
             <span class="currency-circle currency-circle--usd">$</span>
           </div>
         </div>
@@ -282,10 +282,10 @@
             <span class="currency-circle currency-circle--inr">₹</span>
           </div>
           <div class="cell cell--multiplier cell--right">
-            <span class="cell-text cell-text--bold cell-text--green">x5</span>
+            <span class="cell-text cell-text--bold">x5</span>
           </div>
           <div class="cell cell--win cell--right">
-            <span class="cell-text cell-text--bold cell-text--green">2,500.00</span>
+            <span class="cell-text cell-text--bold">2,500.00</span>
             <span class="currency-circle currency-circle--inr">₹</span>
           </div>
         </div>
@@ -313,7 +313,7 @@
             <span class="cell-text cell-text--bold">x2</span>
           </div>
           <div class="cell cell--win cell--right">
-            <span class="cell-text cell-text--bold cell-text--green">10.00</span>
+            <span class="cell-text cell-text--bold">10.00</span>
             <span class="currency-circle currency-circle--usd">$</span>
           </div>
         </div>
@@ -413,10 +413,10 @@
           <span class="currency-circle ${currency.cls}">${currency.symbol}</span>
         </div>
         <div class="cell cell--multiplier cell--right">
-          <span class="cell-text cell-text--bold ${multNum >= 1 ? 'cell-text--green' : ''}">${multDisplay}</span>
+          <span class="cell-text cell-text--bold ${multNum > 5 ? 'cell-text--green' : ''}">${multDisplay}</span>
         </div>
         <div class="cell cell--win cell--right">
-          <span class="cell-text cell-text--bold ${winNum > 0 ? 'cell-text--green' : ''}">${winFormatted}</span>
+          <span class="cell-text cell-text--bold ${multNum > 5 ? 'cell-text--green' : ''}">${winFormatted}</span>
           <span class="currency-circle ${currency.cls}">${currency.symbol}</span>
         </div>`;
     }
