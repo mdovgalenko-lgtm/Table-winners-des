@@ -170,7 +170,7 @@
             <span class="currency-circle currency-circle--rub">₽</span>
           </div>
           <div class="cell cell--multiplier cell--right">
-            <span class="cell-text cell-text--bold cell-text--green">x10</span>
+            <span class="cell-text cell-text--bold cell-text--green">x10.00</span>
           </div>
           <div class="cell cell--win cell--right">
             <span class="cell-text cell-text--bold cell-text--green">1,000.00</span>
@@ -254,7 +254,7 @@
             <span class="currency-circle currency-circle--usd">$</span>
           </div>
           <div class="cell cell--multiplier cell--right">
-            <span class="cell-text cell-text--bold">x2</span>
+            <span class="cell-text cell-text--bold">x2.00</span>
           </div>
           <div class="cell cell--win cell--right">
             <span class="cell-text cell-text--bold">1.00</span>
@@ -282,7 +282,7 @@
             <span class="currency-circle currency-circle--inr">₹</span>
           </div>
           <div class="cell cell--multiplier cell--right">
-            <span class="cell-text cell-text--bold">x5</span>
+            <span class="cell-text cell-text--bold">x5.00</span>
           </div>
           <div class="cell cell--win cell--right">
             <span class="cell-text cell-text--bold">2,500.00</span>
@@ -310,7 +310,7 @@
             <span class="currency-circle currency-circle--usd">$</span>
           </div>
           <div class="cell cell--multiplier cell--right">
-            <span class="cell-text cell-text--bold">x2</span>
+            <span class="cell-text cell-text--bold">x2.00</span>
           </div>
           <div class="cell cell--win cell--right">
             <span class="cell-text cell-text--bold">10.00</span>
@@ -389,7 +389,7 @@
       const multNum = parseFloat(mult);
       const win = (parseFloat(bet) * (multNum || rand(0, 2))).toFixed(2);
       const winNum = parseFloat(win);
-      const multDisplay = multNum === 0 ? '0.00x' : multNum.toFixed(2) + 'x';
+      const multDisplay = 'x' + multNum.toFixed(2);
       const winFormatted = winNum >= 1000
         ? winNum.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
         : winNum.toFixed(2);
